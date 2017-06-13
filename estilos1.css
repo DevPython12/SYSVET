@@ -1,0 +1,19 @@
+.bordestodos {
+	border-style: solid;
+  	border-width: 5px;
+  	border-color: #0D9CFF;
+ 	border-radius: 10px;
+}
+.navbar-brand-ext{
+	float:left;
+	height:50px;
+	padding:0px 0px;
+	font-size:18px;
+	line-height:20px
+}
+.fondoblanco{
+	background-color:#FFFFFF;
+}
+.fondonegro{
+	background-color:#000000;
+}

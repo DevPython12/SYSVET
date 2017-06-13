@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap337/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="estilos1.css">
+	<title>Inicio</title>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+            <div class="navbar-header"><!--navbar con el logo de la clinica-->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="glyphicon glyphicon-th"></span>
+              </button>
+              <a class="navbar-brand-ext" href="#">
+                <div class="navbar-brand"></div>
+                <img src="logoclinica2.jpg" width="90px" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse"><!--navbar-->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a data-toggle="tab" href="#Inicio">Inicio</a></li>
+                <li class="dropdown"><!--aqui empieza el menu del navbar para mascotas-->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Mascotas
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	<li><a data-toggle="tab" href="#MascotasAltas">Altas</a></li>
+                    <li><a data-toggle="tab" href="#MascotasBajas">Bajas</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><!--aqui empieza el menu del navbar para los clientes-->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Clientes
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	<li><a data-toggle="tab" href="#ClientesAltas">Altas</a></li>
+                    <li><a data-toggle="tab" href="#ClientesBajas">Bajas</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><!--aqui esta el menu del navbar para el usuario actual-->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user"></span>
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#Usuario"><span class="glyphicon glyphicon-user"></span>Usuario</a></li>
+                    <li><a href="#Configuracion"><span class="glyphicon glyphicon-cog"></span>Configuracion</a></li>
+                    <li><a href="#Salir"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+	<div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+        	<div class="tab-content" >
+              <div id="Inicio" class="tab-pane fade in active">
+                <h3>Inicio</h3>
+                <p></p>
+              </div>
+              <div id="Consultas" class="tab-pane fade">
+                <h3>Caja</h3>
+              </div>
+				<div id="MascotasAltas" class="tab-pane fade"><!--registro de altas mascotas-->
+	                <h3>Registro</h3>
+	                <form action="" method="GET"><!--registro de alta de las mascotas-->
+	                  <div class="form-group col-sm-12 col-sm-4 col-md-4">
+	                    <label for="">Detalles de la mascota</label><br />
+	                    <div class="col-md-10 col-sm-10">
+	                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
+	                    <input type="text" name="descripcion" class="form-control" placeholder="ID Cliente"><br />
+	                    <input type="text" name="descripcion" class="form-control" placeholder="Edad"><br />
+	                    <input type="text" name="nombre" class="form-control" placeholder="Color"><br />
+	                    <input type="text" name="descripcion" class="form-control" placeholder="Longitud"><br />
+	                    <input type="text" name="descripcion" class="form-control" placeholder="Peso">
+	                    </div>
+	                    </div>
+	                    <div class="form-group col-sm-12 col-sm-4 col-md-4">
+	                    <label>Tipo de Mascota</label><br />
+	                    <div class="col-md-10 col-sm-10">
+	                    <select name="Tipo de mascota" id="" class="form-control"><!--menu del tipo de mascota dentro de los datos-->
+	                      <option value="">Selecione una opcion...</option>
+	                      <option value="Canino">Perro</option>
+	                      <option value="Felino">Gato</option>
+	                      <option value="Reptil">Reptil</option>
+	                      <option value="Pez">Pez</option>
+	                      <option value="Ave">Ave</option>
+	                      <option value="Otro">Otro</option>
+	                    </select>
+	                    </div>
+	                    <label>Raza de la mascota</label><br>
+	                    <div class="col-md-10 col-sm-10">
+	                    <select name="Raza" id="" class="form-control">
+	                      <option value="">Selecione una opcion...</option>
+	                    </select>
+	                    </div>
+	                    <label>Tipo de Sangre</label><br>
+	                    <div class="col-md-10 col-sm-10">
+	                    <select name="Raza" id="" class="form-control">
+	                      <option value="">Selecione una opcion...</option>
+	                    </select>
+	                    </div>
+	                    <div class="form-group">
+	                    <label>Esterilizado</label><br>
+	                    <div class="col-md-10 col-sm-10 container">
+	                    <label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2">Si
+						</label>					
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+						</label>
+						</div>
+						</div>
+						<div class="form-group">
+	                    <label>Sexo de la mascota</label>
+	                    <div class="col-md-10 col-sm-10 container">
+	                    <label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2">Macho
+						</label>					
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Hembra
+						</label>
+						</div>
+						</div>
+						</div>
+	                  <div class="form-group col-sm-12 col-sm-12 col-md-12">
+	                  <label>Alergias</label><br>
+	                  <div class="col-md-12 col-sm-12 col-xs-12">
+	                  <input type="text" name="descripcion" class="form-control" placeholder="Alergias">
+	                  </div>
+	                  <label>Observaciones</label>
+	                  <div class="col-md-12 col-sm-12 col-xs-12">
+	                  <textarea class="form-control" rows="3" placeholder="Observaciones"></textarea>
+	                  </div>
+	                  </div>
+	                </form>
+	            </div>
+            	<div id="ClientesAltas" class="tab-pane fade"><!--registro de altas de clientes-->
+	                <h3>Registro</h3>
+	                <form action="" method="GET">
+                  	<div class="form-group"><!--datos a ingresar del cliente-->
+                  		<div class="col-xs-12 col-md-4 col-sm-4">
+		                    <label for="">Detalles del Cliente</label><br>
+		                    <div class="col-md-10 col-sm-10">
+		                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
+		                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
+		                    <input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Direccion"><br />
+							<input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
+							<input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
+							</div>
+							<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
+		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
+		            		<select name="" id="" class="form-control">
+			                   	<option value="">1</option>
+			                   	<option value="">2</option>
+			                   	<option value="">3</option>
+			                   	<option value="">4</option>
+			                   	<option value="">5</option>
+			                   	<option value="">6</option>
+			                   	<option value="">7</option>
+			                </select><br>
+			                </div>
+		                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
+			                    <select name="" id="" class="form-control">
+			                    	<option value="">Enero</option>
+			                    	<option value="">Febrero</option>
+			                    	<option value="">Marzo</option>
+			                    	<option value="">Abril</option>
+			                    	<option value="">Mayo</option>
+			                    	<option value="">Junio</option>
+			                    	<option value="">Julio</option>
+			                    	<option value="">Agosto</option>
+			                    	<option value="">Septiembre</option>
+			                    	<option value="">Octubre</option>
+			                    	<option value="">Noviembre</option>
+			                    	<option value="">Diciembre</option>
+			                    </select><br />
+			                </div>
+			                <div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
+			            		<select name="" id="" class="form-control">
+				                   	<option value="">2017</option>
+				                   	<option value="">2016</option>
+				                   	<option value="">2015</option>
+				                   	<option value="">2014</option>
+				                   	<option value="">2013</option>
+				                   	<option value="">2012</option>
+				                   	<option value="">2011</option>
+				                </select>
+			            	</div>
+	                    </div>
+            		</div>
+            		
+					</form>
+	            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"><!--logo sysvet e informacion de abajo-->
+    	<div class="row">
+    		<div class="col-xs-12 col-md-12 col-sm-12 fondonegro">
+    			<img src="logosysvetmod.png" width="150PX" alt="">
+    		</div>
+    	</div>
+    </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap337/js/bootstrap.min.js"></script>
+</body>
+</html>
