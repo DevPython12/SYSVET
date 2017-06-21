@@ -64,40 +64,24 @@
         <div class="col-md-12 col-xs-12">
         	<div class="tab-content" ><!--formularios de las opciones-->
               <div id="Inicio" class="tab-pane fade in active">
-                <h3>Inicio</h3>
-                <p></p>
+                <h3>Notas <a data-target="#NuevaNota" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span></a></h3>
+                <div class="col-xs-12 col-md-4 col-sm-4">
+                <div class="panel panel-primary">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Panel title <a data-target="#EditarNota" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a></h3>
+				  </div>
+				  <div class="panel-body">
+				    Panel content
+				  </div>
+				</div>
+				</div>
               </div>
               <div id="MascotasBajas" class="tab-pane fade"><!--registro para editar o dar de baja mascotas-->
                 <h3>Bajas de Mascotas</h3>
                 <form action="" method="GET">
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaBaja">Buscar</button><br>
-					<div class="modal fade" id="BuscarMascotaBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca mascota para dar de baja o editar-->
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="">Buscar Mascota</h4>
-					      </div>
-					    	<div class="modal-body">
-								<div class="input-group container-fluid">
-									<input type="text" class="form-control" placeholder="Buscar Cliente">
-									<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Buscar</button>
-									</span>
-								</div><br>
-								<div class="col-md-4 col-xs-12 col-sm-4">
-									<select name="" id="" class="form-control">
-										<option value="">Mascota</option>
-							        </select>
-						        </div>
-							</div><br>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-					      </div>
-					    </div>
-					  </div>
-					</div><br>
 					<label for="">Detalles de la Mascota</label><br>
+					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
 					<input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
 	                <input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
@@ -105,7 +89,7 @@
 	                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
 	                <input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
 	                <input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
-	                
+	                </div>
 			        <div class="col-xs-12 col-sm-12 col-md-12">
 					<button class="btn btn-default" type="button">Eliminar</button>
 					<button class="btn btn-default" type="button">Editar</button>
@@ -116,38 +100,20 @@
                 <h3>Bajas y Edicion de Clientes</h3>
                 <form action="" method="GET">
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteBaja">Buscar</button><br>
-					<div class="modal fade" id="BuscarClienteBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca cliente para dar de baja o editar-->
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="">Buscar Cliente</h4>
-					      </div>
-					      <div class="modal-body">
-					      	<div class="col-lg-6">
-							    <div class="input-group">
-							      <input type="text" class="form-control" placeholder="Buscar">
-							      <span class="input-group-btn">
-							        <button class="btn btn-default" type="button">Buscar</button>
-							      </span>
-							    </div>
-							    </div>
-							    </div><br>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-					      </div>
-					    </div>
-					  </div>
-					</div><br>
 					<label for="">Detalles del Cliente</label><br>
+					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
 		            <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
 		            <input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
 		            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
 					<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
 					<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
-					<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
-					<div class="col-md-4 col-sm-4 col-xs-12">
+					</div>
+					<div class="col-sm-12 col-md-12 col-xs-12 row">
+						<label>Fecha de nacimiento</label><br />
+					</div>
+					<div class="col-xs-12 col-md-12 col-sm-12">
+					<div class="col-md-4 col-sm-4 col-xs-12"><!--menu de fecha de nacimiento-->
 		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
 		            		<select name="" id="" class="form-control">
 			                   	<option value="">1</option>
@@ -191,69 +157,32 @@
 					<button class="btn btn-default" type="button">Eliminar</button>
 					<button class="btn btn-default" type="button">Editar</button>
 					</div>
+					</div>
                 </form>
                 <p></p>
               </div>
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
                 <h3>Registro de Vacunas</h3>
                 <form action="" method="GET"><!--aqui esta el modal de las vacunas-->
-                	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteVacunas">Buscar</button><br>
-					<div class="modal fade" id="BuscarClienteVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca el dueño de la mascota-->
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="">Buscar Cliente</h4>
-					      </div>
-					      <div class="modal-body">
-					      	<div class="col-lg-6">
-							    <div class="input-group">
-							      <input type="text" class="form-control" placeholder="Buscar">
-							      <span class="input-group-btn">
-							        <button class="btn btn-default" type="button">Buscar</button>
-							      </span>
-							    </div>
-							    </div>
-							    </div><br>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-					      </div>
-					    </div>
-					  </div>
-					</div><br>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteVacunas">Buscar Cliente</button><br><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar</button><br>
-					<div class="modal fade" id="BuscarMascotaVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca la mascota para la vacuna-->
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="">Buscar Mascota</h4>
-					      </div>
-					      <div class="modal-body">
-					      	<div class="col-lg-6">
-							    <div class="input-group">
-							      <input type="text" class="form-control" placeholder="Buscar">
-							      <span class="input-group-btn">
-							        <button class="btn btn-default" type="button">Buscar</button>
-							      </span>
-							    </div>
-							    </div>
-							    </div><br>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-					      </div>
-					    </div>
-					  </div>
-					</div><br>
+					
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota</button><br><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
+					
+					</div><br>
+					<div class="col-xs-12 col-sm-3 col-md-3">
 					<input type="text" name="descripcion" class="form-control" placeholder="Vacuna"><br />
-	                <input type="text" name="descripcion" class="form-control" placeholder="Descripcion">
+					<input type="text" name="descripcion" class="form-control" placeholder="Descripcion">
+					</div>
                 </form>
               </div>
 				<div id="MascotasAltas" class="tab-pane fade"><!--registro de altas mascotas-->
@@ -264,29 +193,7 @@
 	                    <div class="col-md-10 col-sm-10 col-xs-12">
 	                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
 	                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteRegistro">Buscar</button>
-						<div class="modal fade" id="BuscarClienteRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca de dueño de la mascota en registro-->
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						        <h4 class="modal-title" id="">Buscar Cliente</h4>
-						      </div>
-						      <div class="modal-body">
-						      	<div class="col-lg-6">
-								    <div class="input-group">
-								      <input type="text" class="form-control" placeholder="Buscar">
-								      <span class="input-group-btn">
-								        <button class="btn btn-default" type="button">Buscar</button>
-								      </span>
-								    </div>
-								    </div>
-								    </div><br>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
+						
 						<label>Aqui muestra el nombre del cliente</label>
 	                    <input type="text" name="descripcion" class="form-control" placeholder="Edad"><br />
 	                    <input type="text" name="nombre" class="form-control" placeholder="Color"><br />
@@ -416,12 +323,167 @@
       </div>
     </div><br>
     <div class="container"><!--logo sysvet e informacion de abajo-->
-    	<div class="row">
+		<div class="row">
     		<div class="col-xs-12 col-md-12 col-sm-12 fondonegro">
     			<img src="logosysvetmod.png" width="150PX" alt="" align="right">
     		</div>
     	</div>
     </div>
+    <div class="modal fade" id="BuscarMascotaBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca mascota para dar de baja o editar-->
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="">Buscar Mascota</h4>
+					      </div>
+					    	<div class="modal-body">
+								<div class="input-group container-fluid">
+									<input type="text" class="form-control" placeholder="Buscar Cliente">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Buscar</button>
+									</span>
+								</div><br>
+								<div class="col-md-4 col-xs-12 col-sm-4">
+									<select name="" id="" class="form-control">
+										<option value="">Mascota</option>
+							        </select>
+						        </div>
+							</div><br>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div><br>
+    <div class="modal fade" id="BuscarClienteBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca cliente para dar de baja o editar-->
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="">Buscar Cliente</h4>
+					      </div>
+					      <div class="modal-body">
+					      	<div class="col-lg-6">
+							    <div class="input-group">
+							      <input type="text" class="form-control" placeholder="Buscar">
+							      <span class="input-group-btn">
+							        <button class="btn btn-default" type="button">Buscar</button>
+							      </span>
+							    </div>
+							    </div>
+							    </div><br>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div><br>
+    <div class="modal fade" id="BuscarMascotaVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca la mascota para la vacuna-->
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="">Buscar Mascota</h4>
+					      </div>
+					      <div class="modal-body">
+					      	<div class="col-lg-6">
+							    <div class="input-group">
+							      <input type="text" class="form-control" placeholder="Buscar">
+							      <span class="input-group-btn">
+							        <button class="btn btn-default" type="button">Buscar</button>
+							      </span>
+							    </div>
+							    </div>
+							    </div><br>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+	<div class="modal fade" id="NuevaNota" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal para nueva nota-->
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        Nueva Nota
+					        <h4 class="modal-title" id=""><input type="text" class="form-control" aria-label="Nota" placeholder="Nota1"></h4>
+					      </div>
+					    	<div class="modal-body">
+					    	<div class="col-md-12 col-sm-12 col-xs-12 container-fluid">
+			                	<textarea class="form-control" rows="3" placeholder="Notas"></textarea>
+			                </div><br><br>
+							</div><br>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Aceptar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+	<div class="modal fade" id="EditarNota" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal para editar nota-->
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        Nueva Nota
+					        <h4 class="modal-title" id=""><input type="text" class="form-control" aria-label="Nota" placeholder="Nombre de la nota"></h4>
+					      </div>
+					    	<div class="modal-body">
+					    	<div class="col-md-12 col-sm-12 col-xs-12 container-fluid">
+			                	<textarea class="form-control" rows="3" placeholder="Notas"></textarea>
+			                </div><br><br>
+							</div><br>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Aceptar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<div class="modal fade" id="BuscarClienteRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca de dueño de la mascota en registro-->
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="">Buscar Cliente</h4>
+						      </div>
+						      <div class="modal-body">
+						      	<div class="col-lg-6">
+								    <div class="input-group">
+								      <input type="text" class="form-control" placeholder="Buscar">
+								      <span class="input-group-btn">
+								        <button class="btn btn-default" type="button">Buscar</button>
+								      </span>
+								    </div>
+								    </div>
+								    </div><br>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+	<div class="modal fade" id="BuscarClienteVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca el dueño de la mascota-->
+				<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="">Buscar Cliente</h4>
+				</div>
+				<div class="modal-body">
+				<div class="col-lg-6">
+				<div class="input-group">
+				<input type="text" class="form-control" placeholder="Buscar">
+				<span class="input-group-btn">
+				 <button class="btn btn-default" type="button">Buscar</button>
+				</span>
+				</div>
+				</div>
+				</div><br>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
