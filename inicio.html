@@ -77,16 +77,54 @@
 				</div>
 				</div>
               </div>
-              <div id="Consultas" class="tab-pane fade"><!--formulario para registrar consultas-->
-              	<h3>Consulta</h3>
+				<div id="Consultas" class="tab-pane fade"><!--formulario para registrar consultas-->
+					<h3>Consulta</h3>
               		<form>
-              			
+              		<div class="col-xs-12 col-md-12 col-sm-12">
+              			<input type="text" name="" class="form-control" placeholder="Nombre Apellido Paterno y Materno del Doctor" readonly><br>
+              			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar Mascota
+              			</button><br><br>
+              			<div class="col-xs-12 col-md-4 col-sm-4">
+              				<label>Descripcion fisica de la mascota</label><br>
+              				<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+              				<input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
+			            </div>
+			            <div class="col-xs-12 col-md-4 col-sm-4">
+			            	<label>Clasificacion de la mascota</label>
+			            	<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
+			            	<input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
+			            </div>
+			            <div class="col-xs-12 col-md-4 col-sm-4">
+			            	<label>Detalles de crecimiento</label><br>
+			                <input type="text" name="descripcion" class="form-control" placeholder="Edad"><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Longitud"><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Peso"><br>
+              			</div>
+              		</div>
+              		<div class="col-xs-12 col-md-12 col-sm-12">
+	              		<label>Detalles Cliente</label><br>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Materno" readonly><br />
+	              		</div>
+	              		<label>Observaciones</label>
+		                <div class="col-md-12 col-sm-12 col-xs-12">
+		                <textarea class="form-control" rows="3" placeholder="Observaciones"></textarea><br>
+		                <button class="btn btn-default">Guardar</button>
+		                <button class="btn btn-default">Eliminar</button>
+		                </div>
+	                </div>
               		</form>
-              </div>
+				</div>
               <div id="MascotasBajas" class="tab-pane fade"><!--registro para editar o dar de baja mascotas-->
-                <h3>Bajas de Mascotas</h3>
+                <h3>Bajas y Edicion de Mascotas</h3>
                 <form action="" method="GET">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaBaja">Buscar</button><br>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar</button><br>
 					<label for="">Detalles de la Mascota</label><br>
 					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
@@ -166,7 +204,6 @@
 					</div>
 					</div>
                 </form>
-                <p></p>
               </div>
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
                 <h3>Registro de Vacunas</h3>
@@ -343,7 +380,7 @@
     		</div>
     	</div>
     </div>
-    <div class="modal fade" id="BuscarMascotaBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca mascota para dar de baja o editar-->
+    <div class="modal fade" id="BuscarMascotayCliente" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca mascota para dar de baja o editar-->
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -385,13 +422,13 @@
 							      </span>
 							    </div>
 							    </div>
-							    </div><br>
+							    </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
 					      </div>
 					    </div>
 					  </div>
-					</div><br>
+					</div>
     <div class="modal fade" id="BuscarMascotaVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca la mascota para la vacuna-->
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
@@ -408,7 +445,7 @@
 							      </span>
 							    </div>
 							    </div>
-							    </div><br>
+							    </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
 					      </div>
@@ -425,8 +462,8 @@
 					    	<div class="modal-body">
 					    	<div class="col-md-12 col-sm-12 col-xs-12 container-fluid">
 			                	<textarea class="form-control" rows="3" placeholder="Notas"></textarea>
-			                </div><br><br>
-							</div><br>
+			                </div>
+							</div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Aceptar</button>
 					      </div>
@@ -443,8 +480,8 @@
 					    	<div class="modal-body">
 					    	<div class="col-md-12 col-sm-12 col-xs-12 container-fluid">
 			                	<textarea class="form-control" rows="3" placeholder="Notas"></textarea>
-			                </div><br><br>
-							</div><br>
+			                </div>
+							</div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-primary" data-dismiss='modal'>Aceptar</button>
 					      </div>
