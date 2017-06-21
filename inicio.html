@@ -79,12 +79,9 @@
               </div>
               <div id="Consultas" class="tab-pane fade"><!--formulario para registrar consultas-->
               	<h3>Consulta</h3>
-              	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              		<form>
+              			
+              		</form>
               </div>
               <div id="MascotasBajas" class="tab-pane fade"><!--registro para editar o dar de baja mascotas-->
                 <h3>Bajas de Mascotas</h3>
@@ -109,7 +106,7 @@
               <div id="ClientesBajas" class="tab-pane fade"><!-- formulario para dar de baja el cliente-->
                 <h3>Bajas y Edicion de Clientes</h3>
                 <form action="" method="GET">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteBaja">Buscar</button><br>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br>
 					<label for="">Detalles del Cliente</label><br>
 					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
@@ -175,7 +172,7 @@
                 <h3>Registro de Vacunas</h3>
                 <form action="" method="GET"><!--aqui esta el modal de las vacunas-->
 					<div class="col-xs-12 col-sm-3 col-md-3">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteVacunas">Buscar Cliente</button><br><br>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente</button><br><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
@@ -199,12 +196,19 @@
 	                <h3>Registro</h3>
 	                <form action="" method="GET"><!--registro de alta de las mascotas-->
 	                  <div class="form-group col-sm-12 col-sm-4 col-md-4">
-	                    <label for="">Detalles de la mascota</label><br />
+	                  <div class="col-md-10 col-sm-10 col-xs-12">
+	                  <label>Datos del cliente</label><br>
+	                  	<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br><br>
+						<input type="text" name="descripcion" class="form-control" placeholder="Nombre Cliente" readonly><br />
+	                    <input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br />
+	                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Materno" readonly><br />
+	                    
+	                    </div>
+	                    </div>
+	                    <div class="form-group col-xs-12 col-sm-4 col-md-4">
 	                    <div class="col-md-10 col-sm-10 col-xs-12">
+	                    <label for="">Detalles de la mascota</label><br />
 	                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
-	                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarClienteRegistro">Buscar</button>
-						
-						<label>Aqui muestra el nombre del cliente</label>
 	                    <input type="text" name="descripcion" class="form-control" placeholder="Edad"><br />
 	                    <input type="text" name="nombre" class="form-control" placeholder="Color"><br />
 	                    <input type="text" name="descripcion" class="form-control" placeholder="Longitud"><br />
@@ -365,7 +369,7 @@
 					    </div>
 					  </div>
 					</div><br>
-    <div class="modal fade" id="BuscarClienteBaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca cliente para dar de baja o editar-->
+    <div class="modal fade" id="BuscarCliente" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca cliente para dar de baja o editar-->
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -447,53 +451,6 @@
 					    </div>
 					  </div>
 					</div>
-					<div class="modal fade" id="BuscarClienteRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca de dueño de la mascota en registro-->
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						        <h4 class="modal-title" id="">Buscar Cliente</h4>
-						      </div>
-						      <div class="modal-body">
-						      	<div class="col-lg-6">
-								    <div class="input-group">
-								      <input type="text" class="form-control" placeholder="Buscar">
-								      <span class="input-group-btn">
-								        <button class="btn btn-default" type="button">Buscar</button>
-								      </span>
-								    </div>
-								    </div>
-								    </div><br>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-	<div class="modal fade" id="BuscarClienteVacunas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca el dueño de la mascota-->
-				<div class="modal-dialog" role="document">
-				<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title" id="">Buscar Cliente</h4>
-				</div>
-				<div class="modal-body">
-				<div class="col-lg-6">
-				<div class="input-group">
-				<input type="text" class="form-control" placeholder="Buscar">
-				<span class="input-group-btn">
-				 <button class="btn btn-default" type="button">Buscar</button>
-				</span>
-				</div>
-				</div>
-				</div><br>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss='modal'>Cancelar</button>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
