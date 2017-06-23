@@ -24,6 +24,17 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a data-toggle="tab" href="#Inicio">Inicio</a></li>
                 <li><a data-toggle="tab" href="#Consultas">Consultas</a></li>
+                <li class="dropdown"><!--aqui empieza el menu del navbar para reportes-->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Reportes
+                     <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	<li><a data-toggle="tab" href="#Historial">Historial Clinico</a></li>
+                    <li><a data-toggle="tab" href="#">Reporte de Mascotas</a></li>
+                    <li><a data-toggle="tab" href="#">Reporte de Clientes</a></li>
+                  </ul>
+                </li>
                 <li class="dropdown"><!--aqui empieza el menu del navbar para los clientes-->
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Clientes
@@ -77,11 +88,82 @@
 				</div>
 				</div>
               </div>
+              <div id="Historial" class="tab-pane fade"><!--pagina de inicio, se usa para notas-->
+                <h3>Historial Clinico</h3>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar Mascota
+              	</button>
+              	<div class="col-xs-12 col-md-12 col-sm-12">
+              	<label>Detalles Cliente</label><br>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Materno" readonly><br />
+	              		</div>
+              			<div class="col-xs-12 col-md-3 col-sm-3">
+              				<label>Descripcion fisica de la mascota</label><br>
+              				<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+              				<input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
+			            </div>
+			            <div class="col-xs-12 col-md-3 col-sm-3">
+			            	<label>Clasificacion de la mascota</label>
+			            	<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
+			            	<input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
+			            </div>
+			            <div class="col-xs-12 col-md-3 col-sm-3">
+			            	<label>Detalles de crecimiento 1° consulta</label><br>
+			                <input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Longitud" readonly><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
+              			</div>
+              			<div class="col-xs-12 col-md-3 col-sm-3">
+			            	<label>Detalles de crecimiento actual</label><br>
+			                <input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Longitud" readonly><br />
+			                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
+              			</div>
+              			<table class="table table-condensed">
+              			<tr class="">
+							  <td class="">Num. Consulta</td>
+							  <td class="">Doctor</td>
+							  <td class="">Observaciones</td>
+							  <td class="">Tratamiento</td>
+							  <td class="">Fecha</td>
+              			</tr>
+              			<tr class="">
+							  <td class="">Num. Consulta</td>
+							  <td class="">Doctor</td>
+							  <td class="">Observaciones</td>
+							  <td class="">Tratamiento</td>
+							  <td class="">Fecha</td>
+              			</tr>
+              			<tr class="">
+							  <td class="">Num. Consulta</td>
+							  <td class="">Doctor</td>
+							  <td class="">Observaciones</td>
+							  <td class="">Tratamiento</td>
+							  <td class="">Fecha</td>
+              			</tr>
+              			</table>
+	              </div>
+              </div>
 				<div id="Consultas" class="tab-pane fade"><!--formulario para registrar consultas-->
 					<h3>Consulta</h3>
               		<form>
               		<div class="col-xs-12 col-md-12 col-sm-12">
-              			<input type="text" name="" class="form-control" placeholder="Nombre Apellido Paterno y Materno del Doctor" readonly><br>
+              		<label>Detalles del Doctor</label><br>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+	              		</div>
+	              		<div class="col-xs-12 col-md-4 col-sm-4">
+	              			<input type="text" name="descripcion" class="form-control" placeholder="Apellido Materno" readonly><br />
+	              		</div>
               			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar Mascota
               			</button><br><br>
               			<div class="col-xs-12 col-md-4 col-sm-4">
@@ -207,25 +289,26 @@
               </div>
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
                 <h3>Registro de Vacunas</h3>
-                <form action="" method="GET"><!--aqui esta el modal de las vacunas-->
+                <form action="" method="GET">
 					<div class="col-xs-12 col-sm-3 col-md-3">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente</button><br><br>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente
+					</button><br><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
 					
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota</button><br><br>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota
+					</button><br><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
-					
 					</div><br>
-					<div class="col-xs-12 col-sm-3 col-md-3">
+					<div class="col-xs-12 col-sm-12 col-md-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Vacuna"><br />
-					<input type="text" name="descripcion" class="form-control" placeholder="Descripcion">
+					<textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
 					</div>
                 </form>
               </div>
