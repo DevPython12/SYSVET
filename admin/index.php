@@ -98,7 +98,7 @@
                 <div class="col-xs-12 col-md-4 col-sm-4">
                 <div class="panel panel-primary">
 				  <div class="panel-heading">
-				    <h3 class="panel-title">Titulo de la nota mas un espacio despues <a data-target="#EditarNota" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a></h3>
+				    <h3 class="panel-title">Titulo de la nota mas un espacio despues <a data-target="#EditarNota" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a> <span class="glyphicon glyphicon-remove"></span></h3>
 				  </div>
 				  <div class="panel-body">
 				  contenido de la nota
