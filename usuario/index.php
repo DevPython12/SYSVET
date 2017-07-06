@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../estilos1.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap337/css/bootstrap.css">
 	<title>Panel de Usuario</title>
 </head>
 <body>
