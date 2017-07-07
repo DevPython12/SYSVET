@@ -26,7 +26,7 @@
                 <li class="active"><a data-toggle="tab" href="#Inicio">Inicio</a></li>
                 <li><a data-toggle="tab" href="#Consultas">Consultas</a></li>
                 <li><a data-toggle="tab" href="#Historial">Historial Clinico</a></li>
-                <li class="dropdown"><!--aqui empieza el menu del navbar para los clientes-->
+                <!--aqui empieza el menu del navbar para los clientes--><li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     Clientes
                      <b class="caret"></b>
@@ -64,10 +64,11 @@
     </nav>
 	<div class="container-fluid">
       <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
+      <div class="col-sm-3 col-md-2 sidebar col-xs-1">
+      	<h4>Panel Administrativo</h4>
       	<ul class="nav nav-sidebar">
-	      	<li class="espaciado">
-	      		Administracion clinica
+	      	<li class="espaciado dropdown">
+				Administracion clinica
 	      	</li>
       		<li class="espaciado">
       			<a href="">Usuarios</a>
@@ -79,17 +80,6 @@
       			<a href="">Empleados</a>
       		</li>
       	</ul>
-      	<ul class="nav nav-sidebar">
-      		<li>
-      			Administracion de usuarios
-      		</li>
-      		<li>
-      			Administracion de medicos/empleados
-      		</li>
-      		<li>
-      			Administracion de ...
-      		</li>
-      	</ul>
       </div><br>
         <div class="col-sm-9 col-md-10 main">
         	<div class="tab-content" ><!--formularios de las opciones-->
@@ -98,7 +88,10 @@
                 <div class="col-xs-12 col-md-4 col-sm-4">
                 <div class="panel panel-primary">
 				  <div class="panel-heading">
-				    <h3 class="panel-title">Titulo de la nota mas un espacio despues <a data-target="#EditarNota" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a> <span class="glyphicon glyphicon-remove"></span></h3>
+				    <h3 class="panel-title">Titulo de la nota mas un espacio despues <br>
+				    <a data-target="#EditarNota" data-toggle="modal"><span class="glyphicon glyphicon-pencil"></span></a>
+				    <a data-target="#EliminarNota" data-toggle="modal"><span class="glyphicon glyphicon-remove"></span></a>
+				    </h3>
 				  </div>
 				  <div class="panel-body">
 				  contenido de la nota
@@ -109,7 +102,7 @@
               <div id="Historial" class="tab-pane fade"><!--pagina de inicio, se usa para notas-->
                 <h3>Historial Clinico</h3>
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar Mascota
-              	</button>
+              	</button><br><br>
               	<div class="col-xs-12 col-md-12 col-sm-12">
               	<label>Detalles Cliente</label><br>
 	              		<div class="col-xs-12 col-md-4 col-sm-4">
@@ -228,12 +221,18 @@
 					<label for="">Detalles de la Mascota</label><br>
 					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
-					<input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
-	                <input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
 	                <input type="text" name="descripcion" class="form-control" placeholder="Longitud" readonly><br />
-	                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
-	                <input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
-	                <input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                	<input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
+						<input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                	<input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
+						<input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                	<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
 	                </div>
 			        <div class="col-xs-12 col-sm-12 col-md-12">
 					<button class="btn btn-default" type="button">Eliminar</button>
@@ -244,83 +243,58 @@
               <div id="ClientesBajas" class="tab-pane fade"><!-- formulario para dar de baja el cliente-->
                 <h3>Bajas y Edicion de Clientes</h3>
                 <form action="" method="GET">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br>
-					<label for="">Detalles del Cliente</label><br>
-					<div class="col-sm-3 col-md-3 col-xs-12">
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
-		            <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
-		            <input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
-		            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
-					<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
-					<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
-					</div>
-					<div class="col-sm-12 col-md-12 col-xs-12 row">
-						<label>Fecha de nacimiento</label><br />
-					</div>
-					<div class="col-xs-12 col-md-12 col-sm-12">
-					<div class="col-md-4 col-sm-4 col-xs-12"><!--menu de fecha de nacimiento-->
-		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
-		            		<select name="" id="" class="form-control">
-			                   	<option value="">1</option>
-			                   	<option value="">2</option>
-			                   	<option value="">3</option>
-			                   	<option value="">4</option>
-			                   	<option value="">5</option>
-			                   	<option value="">6</option>
-			                   	<option value="">7</option>
-			                </select><br>
-			                </div>
-		                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
-			                    <select name="" id="" class="form-control">
-			                    	<option value="">Enero</option>
-			                    	<option value="">Febrero</option>
-			                    	<option value="">Marzo</option>
-			                    	<option value="">Abril</option>
-			                    	<option value="">Mayo</option>
-			                    	<option value="">Junio</option>
-			                    	<option value="">Julio</option>
-			                    	<option value="">Agosto</option>
-			                    	<option value="">Septiembre</option>
-			                    	<option value="">Octubre</option>
-			                    	<option value="">Noviembre</option>
-			                    	<option value="">Diciembre</option>
-			                    </select><br />
-			                </div>
-			                <div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
-			            		<select name="" id="" class="form-control">
-				                   	<option value="">2017</option>
-				                   	<option value="">2016</option>
-				                   	<option value="">2015</option>
-				                   	<option value="">2014</option>
-				                   	<option value="">2013</option>
-				                   	<option value="">2012</option>
-				                   	<option value="">2011</option>
-				                </select><br>
-			            	</div>
-			            	</div><br>
-			        <div class="col-xs-12 col-sm-12 col-md-12">
-					<button class="btn btn-default" type="button">Eliminar</button>
-					<button class="btn btn-default" type="button">Editar</button>
-					</div>
-					</div>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br><br>
+					<div class="form-group"><!--datos a ingresar del cliente-->
+                  		<div class="col-xs-12 col-sm-12 col-md-12">
+                  			<label for="">Detalles del Cliente</label><br>
+                  		</div>
+                  		<div class="col-xs-12 col-md-3 col-sm-3">
+		                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
+		                </div>
+		                <div class="col-xs-12 col-md-3 col-sm-3">
+		                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
+		                </div>
+		                <div class="col-xs-12 col-md-3 col-sm-3">
+		                    <input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
+		                </div>
+		                <div class="col-xs-12 col-sm-12 col-md-12">
+							<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
+						</div>
+			        	<div class="col-md-12 col-xs-12 col-sm-12"><br>
+			        		<button type="button" class="btn btn-default">Editar</button>
+			        		<button type="button" class="btn btn-danger">Eliminar</button>
+			        	</div>
+	                </div>
                 </form>
               </div>
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
                 <h3>Registro de Vacunas</h3>
                 <form action="" method="GET">
+                	<div class="col-xs-12 col-sm-12 col-md-12">
+                		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente
+						</button><br><br>
+                	</div>
 					<div class="col-xs-12 col-sm-3 col-md-3">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente
-					</button><br><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
-					
+						<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3">
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota
-					</button><br><br>
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota
+						</button><br><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
 					<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
 					<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
 					</div><br>
@@ -417,18 +391,25 @@
 	                <h3>Registro</h3>
 	                <form action="" method="GET">
                   	<div class="form-group"><!--datos a ingresar del cliente-->
-                  		<div class="col-xs-12 col-md-4 col-sm-4">
-		                    <label for="">Detalles del Cliente</label><br>
-		                    <div class="col-md-10 col-sm-10">
+                  		<div class="col-xs-12 col-sm-12 col-md-12">
+                  			<label for="">Detalles del Cliente</label><br>
+                  		</div>
+                  		<div class="col-xs-12 col-md-3 col-sm-3">
 		                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
-		                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
-		                    <input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
 		                    <input type="text" name="nombre" class="form-control" placeholder="Direccion"><br />
-							<input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
-							<input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
-							</div>
+		                </div>
+		                <div class="col-xs-12 col-md-3 col-sm-3">
+		                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
+		                </div>
+		                <div class="col-xs-12 col-md-3 col-sm-3">
+		                    <input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
+		                    <input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
+		                </div>
+		                <div class="col-xs-12 col-sm-12 col-md-12">
 							<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
-		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
+						</div>
+						<div class="col-md-3 col-xs-12 col-sm-3"><!--menu de dias-->
 		            		<select name="" id="" class="form-control">
 			                   	<option value="">1</option>
 			                   	<option value="">2</option>
@@ -438,8 +419,8 @@
 			                   	<option value="">6</option>
 			                   	<option value="">7</option>
 			                </select><br>
-			                </div>
-		                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
+			            </div>
+		                <div class="col-md-3 col-xs-12 col-sm-3"><!--menu de meses-->
 			                    <select name="" id="" class="form-control">
 			                    	<option value="">Enero</option>
 			                    	<option value="">Febrero</option>
@@ -454,8 +435,8 @@
 			                    	<option value="">Noviembre</option>
 			                    	<option value="">Diciembre</option>
 			                    </select><br />
-			                </div>
-			                <div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
+			            </div>
+			            <div class="col-md-3 col-xs-12 col-sm-3"><!--menu de años-->
 			            		<select name="" id="" class="form-control">
 				                   	<option value="">2017</option>
 				                   	<option value="">2016</option>
@@ -465,11 +446,13 @@
 				                   	<option value="">2012</option>
 				                   	<option value="">2011</option>
 				                </select>
-			            	</div>
-	                    </div>
-            		</div>
-					</form>
-	            </div>
+			        	</div>
+			        	<div class="col-md-12 col-xs-12 col-sm-12"><br>
+			        		<button type="button" class="btn btn-default">Agregar</button>
+			        	</div>
+	                </div>
+				</form>
+	        </div>
             </div>
         </div>
       </div>
@@ -481,6 +464,19 @@
     		</div>
     	</div>
     </div>--><!--logo sysvet e informacion de abajo-->
+    <div class="modal fade" id="EliminarNota" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!--modal que afrima eliminacion de nota-->
+    	<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal-header espaciado">
+    				<h3>¿Esta seguro de eliminar esta nota?</h3><h4>(la eliminacion es irreversible)</h4>
+    			</div>
+    			<div class="modal-footer">
+    				<button type="button" class="btn btn-primary">Si</button>
+    				<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    			</div>
+    		</div>
+    	</div>
+    </div>
     <div class="modal fade" id="BuscarMascotayCliente" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal busca mascota para dar de baja o editar-->
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">

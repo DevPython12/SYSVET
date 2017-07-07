@@ -5,6 +5,9 @@
   	border-top-right-radius: 10px;
  	border-radius: 10px;
 }
+.espacioarriba{
+  padding-top: 50px;
+}
 .espaciado{
 	padding-left: 15px;
 }
