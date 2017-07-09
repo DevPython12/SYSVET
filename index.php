@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +14,7 @@
 </head>
 <body background="logosysvetpeque.jpg">
 	<div class="container">
+	<br><br>
 		<div class="row">
 		</div>
 		<div class="col-sm-4 col-md-4 fondoblanco"></div>
@@ -44,7 +44,6 @@
 			</form>
 			</div>
 		</div>
-		
 	</div>
 
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -72,6 +71,7 @@
           </nav>
 
 
+
 	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -82,4 +82,3 @@
     <script type="text/javascript" src="js/valida_login.js"></script>
 </body>
 </html>
-
