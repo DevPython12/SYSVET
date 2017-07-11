@@ -17,7 +17,7 @@
                 <span class="sr-only">Desplegar navegación</span>
                 <span class="glyphicon glyphicon-th"></span>
               </button>
-              <a class="navbar-brand-ext" href="index.html">
+              <a class="navbar-brand-ext" href="index.php">
                 <div class="navbar-brand"></div>
                 <img src="../logoclinica2.jpg" width="90px" alt=""></a>
             </div>
