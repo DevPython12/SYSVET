@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="jAlert/dist/jAlert.css" />
 	<!--<script type="text/javascript" src="js/code.js"></script>-->
 	<title>SYSVET</title>
+
 </head>
 <body background="logosysvetpeque.jpg">
 	<div class="container">
@@ -21,7 +22,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 fondoblanco"></div>
 			</div>
-			<form name ="login" class="form-signin form-login" role="form" action="PHP/login.php" method="post">
+			<form id="formulario" name ="login" class="form-signin form-login" role="form" action="PHP/login.php" method="post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 fondoblanco" ><br>
 				
@@ -35,7 +36,7 @@
 			</div>
 			<div class="col-md-12">
 				<div>
-					<button  type="submit"class="btn btn-lg btn-primary btn-block"><img src="huella.png" width="25" alt="Entrar">&nbsp;Ingresar</button></a>
+					<button  id="btn-enviar" type="submit"class="btn btn-lg btn-primary btn-block"><img src="huella.png" width="25" alt="Entrar">&nbsp;Ingresar</button></a>
 					<br />
 					<p><br></p>
 				</div>
@@ -44,6 +45,7 @@
 			</div>
 		</div>
 	</div>
+
 	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 		<div class="container-fluid">
 		<div class="col-xs-12 col-md-12 col-sm-12">
@@ -67,7 +69,10 @@
             </div>
         </div>
           </nav>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap337/js/bootstrap.min.js"></script>
