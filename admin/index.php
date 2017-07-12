@@ -64,7 +64,16 @@
     </nav>
 	<div class="container-fluid">
       <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar col-xs-1">
+    	<div ><!--navbar con el logo de la clinica-->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="glyphicon glyphicon-th"></span>
+              </button>
+		</div>
+      <div class="col-sm-3 col-md-2 sidebar col-xs-12 navbar-ex1-collapse">
+                    <a class="navbar-brand-ext" href="index.php">
+                <div class="navbar-brand"></div>
+                <img src="../logoclinica2.jpg" width="90px" alt=""></a><br><br>
       	<h4>Panel Administrativo</h4>
       	<ul class="nav nav-sidebar">
 	      	<li class="espaciado dropdown">
