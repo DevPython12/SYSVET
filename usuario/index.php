@@ -4,7 +4,6 @@
 		header("Location: ../index.php");
 	}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,7 @@
 	<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<title>Inicio</title>
 </head>
-<body>
+<body><br><br><br>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
 		<div class="container-fluid">
             <div class="navbar-header"><!--navbar con el logo de la clinica-->
