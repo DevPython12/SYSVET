@@ -5,7 +5,6 @@
 		header("Location: ../index.php");
 	}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +20,7 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   	
 </head>
-<body>
+<body><br><br><br>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
 		<div class="container-fluid">
             <div class="navbar-header"><!--navbar con el logo de la clinica-->
@@ -29,12 +28,13 @@
                 <span class="sr-only">Desplegar navegación</span>
                 <span class="glyphicon glyphicon-th"></span>
               </button>
-              <a class="navbar-brand-ext" href="index.html">
+              <a class="navbar-brand-ext" href="index.php">
                 <div class="navbar-brand"></div>
                 <img src="../logoclinica2.jpg" width="90px" alt=""></a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse"><!--navbar-->
               <ul class="nav navbar-nav navbar-right">
+              	<li><a href="#Administracion" data-toggle="tab">Administracion</a></li>
                 <li class="active"><a data-toggle="tab" href="#Inicio">Inicio</a></li>
                 <li><a data-toggle="tab" href="#Consultas">Consultas</a></li>
                 <li><a data-toggle="tab" href="#Historial">Historial Clinico</a></li>
@@ -45,7 +45,6 @@
                   </a>
                   <ul class="dropdown-menu">
                   	<li><a data-toggle="tab" href="#ClientesAltas">Altas</a></li>
-                    <li><a data-toggle="tab" href="#ClientesBajas">Bajas/Editar</a></li>
                   </ul>
                 </li>
                 <li class="dropdown"><!--aqui empieza el menu del navbar para mascotas-->
@@ -74,39 +73,32 @@
             </div>
         </div>
     </nav>
-	<div class="container-fluid">
+	<div class="container">
       <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-      	<ul class="nav nav-sidebar">
-	      	<li class="espaciado">
-	      		Administracion clinica
-	      	</li>
-      		<li class="espaciado">
-      			<a href="">Usuarios</a>
-      		</li>
-      		<li class="espaciado">
-      			<a href="">Medicos</a>
-      		</li>
-      		<li class="espaciado">
-      			<a href="">Empleados</a>
-      		</li>
-      		<li> <a data-toggle="tab" href="#clientes">Clientes</a>
-      		</li>
-      	</ul>
-      	<ul class="nav nav-sidebar">
-      		<li>
-      			Administracion de usuarios
-      		</li>
-      		<li>
-      			Administracion de medicos/empleados
-      		</li>
-      		<li>
-      			Administracion de ...
-      		</li>
-      	</ul>
-      </div><br>
-        <div class="col-sm-9 col-md-10 main">
+        <div class="col-sm-12 col-md-12 col-xs-12">
         	<div class="tab-content" ><!--formularios de las opciones-->
+        		<div id="Administracion" class="tab-pane fade"><!--panel de administracion-->
+        			<h3>Herramientas administrativas</h3>
+        			<div class="col-xs-12 col-md-4 col-sm-4">
+        				<h4>Administracion clinica</h4>
+        				<div class="col-xs-12 col-md-12 col-sm-12">
+        					<table>
+        						<ul>
+        							<li><a data-toggle="tab" href="#ClientesBajas">Usuarios</a></li>
+        						</ul>
+        						<ul>
+        							<li><a data-toggle="tab" href="#ClientesBajas">Medicos</a></li>
+        						</ul>
+        						<ul>
+        							<li><a data-toggle="tab" href="#ClientesBajas">Bajas/Editar</a></li>
+        						</ul>
+        						<ul>
+        							<li><a data-toggle="tab" href="#ClientesBajas">Empleados</a></li>
+        						</ul>
+        					</table>
+        				</div>
+        			</div>
+        		</div>
               <div id="Inicio" class="tab-pane fade in active"><!--pagina de inicio, se usa para notas-->
                 <h3 class="header">Notas <a data-target="#NuevaNota" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span></a></h3>
                 <div class="col-xs-12 col-md-4 col-sm-4">
@@ -654,7 +646,9 @@
                       		 <input type="submit" name="reporte_clientes" class="btn btn-danger pull-right" value="Reporte de Clientes"> <br /> <br /> <br />
                     		</form>
                   	   </div>
-
+                  	   </div>
+                  	   </div>
+                  	   </div>
                   	</div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->

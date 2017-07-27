@@ -4,7 +4,6 @@
 		header("Location: ../index.php");
 	}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,7 +51,11 @@
 	<script type="text/javascript" src="../js/insertar_diagnosticos.js"></script>
 
 </head>
+<<<<<<< HEAD
 <body onload="hora_actual()">
+=======
+<body><br><br><br>
+>>>>>>> origin/gh-pages
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
 		<div class="container-fluid">
             <div class="navbar-header"><!--navbar con el logo de la clinica-->
@@ -60,7 +63,7 @@
                 <span class="sr-only">Desplegar navegación</span>
                 <span class="glyphicon glyphicon-th"></span>
               </button>
-              <a class="navbar-brand-ext" href="index.html">
+              <a class="navbar-brand-ext" href="index.php">
                 <div class="navbar-brand"></div>
                 <img src="../logoclinica2.jpg" width="90px" alt=""></a>
             </div>
