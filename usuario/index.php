@@ -134,7 +134,6 @@
 					  <span class="input-group-addon" id="basic-addon1">Buscar</span>
 					  <input id="buscar_mascota_4" type="text" name="buscar_mascota_4" class="buscar_mascota_4 form-control" onmouseout="mascotaID('../PHP/clientes_mascotas.php', 'detalles_cliente','id_mascota_4','');" placeholder="Nombre mascota" aria-describedby="basic-addon1" data-toggle="tooltip" title="Busca por nombre de la mascota.">										 
 				</div><br />
-
 				<div class="col-xs-12 col-md-12 col-sm-12">
 	            	<h4><label>Detalles de la Mascota</label></h4><br>
               			<div class="col-xs-12 col-md-4 col-sm-4">
@@ -162,11 +161,8 @@
               				<input id="alergias_4" type="text" name="alergias_4" class="alergias_4 form-control" placeholder="Alergias" readonly><br /><br />
               			</div>
               		</div>
-
 				<h4><label>Detalles del Cliente</label></h4><br>
 	            <div id="detalles_cliente" class="col-xs-12 col-md-12 col-sm-12">
-              		
-
 	            </div>
 
               		<div class="col-xs-12 col-md-6 col-sm-4">
@@ -506,23 +502,29 @@
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota--><br />
                 <h3>Registro de Vacunas</h3>
                 <form id="registro_vacunas" method="POST">
-                <br />
 					<div class="input-group col-md-4">
 					  <span class="input-group-addon" id="basic-addon1">Buscar</span>
 					  <input id="buscar_mascota_vacuna" type="text" name="buscar_mascota_vacuna" class="buscar_mascota_vacuna form-control" placeholder="Nombre mascota" aria-describedby="basic-addon1" data-toggle="tooltip" title="Busca por nombre de la mascota.">										 
 					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3">
-					 <br /><br />
-					<label>Detalles de la mascota</label>
-					<input id="id_mascota_2" type="hidden" name="id_mascota_2" class="id_mid_mascota_2ascota form-control" readonly><br>
-					<input id="nombre_mascota_2" type="text" name="nombre_mascota_2" class="nombre_mascota_2 form-control" placeholder="Nombre" readonly><br>
-					<input id="edad_mascota_2" type="text" name="edad_mascota_2" class="edad_mascota_2 form-control" placeholder="Edad" readonly><br>
-					<input id="tipo_mascota_2" type="text" name="tipo_mascota_2" class="tipo_mascota_2 form-control" placeholder="Tipo de mascota" readonly><br>
-					<input id="raza_2" type="text" name="raza_2" class="raza_2 form-control" placeholder="Raza" readonly><br>
-					</div><br>
-					<div class="col-md-12 ">
-
-						<div class="col-md-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<label>Detalles de la mascota</label>
+							</div>
+							<div class="col-xs-12 col-md-3 col-sm-3">
+								<input id="id_mascota_2" type="hidden" name="id_mascota_2" class="id_mid_mascota_2ascota form-control" readonly>
+								<input id="nombre_mascota_2" type="text" name="nombre_mascota_2" class="nombre_mascota_2 form-control" placeholder="Nombre" readonly><br>
+							</div>
+							<div class="col-xs-12 col-md-3 col-sm-3">
+								<input id="edad_mascota_2" type="text" name="edad_mascota_2" class="edad_mascota_2 form-control" placeholder="Edad" readonly><br>
+							</div>
+							<div class="col-xs-12 col-md-3 col-sm-3">
+								<input id="tipo_mascota_2" type="text" name="tipo_mascota_2" class="tipo_mascota_2 form-control" placeholder="Tipo de mascota" readonly><br>
+							</div>
+							<div class="col-xs-12 col-md-3 col-sm-3">
+								<input id="raza_2" type="text" name="raza_2" class="raza_2 form-control" placeholder="Raza" readonly><br>
+							</div>
+							<div class="col-xs-12 col-md-3 col-sm-3">
 							<label>Vacunas</label>
 							<select name="vacunas" id="vacunas" class="vacunas form-control"><!--menu del tipo de mascota dentro de los datos-->
 			                   <option value="">Selecione una opcion...</option>
@@ -530,43 +532,32 @@
 			                   		require('../PHP/config.php');		
 					                $sql="SELECT * FROM vacunas";
 							        $result = $con->query($sql);
-		               
 							        while($row=$result->fetch_assoc()) {
 							        	?>
-    
 									        <option value=" <?php echo $row['id_vacuna'] ?> " >
 									        <?php echo $row['nombre']; ?>
 									        </option>
-        
         								<?php
-
 							        }
- 									
 	    						?>
-
 			                </select>
-			                <br /> 
-			                <label>Fecha aplicacion de vacuna</label>
-			                <div class="input-group col-md-8">
-
-								<div class="input-group-addon">
-								    <i class="fa fa-calendar"></i>
-								</div>									
-						  		<input id="date2" class="date2 form-control" name="date" placeholder="YYYY/MM/DD" type="text" data-toggle="tooltip" title="Fecha de aplicacion de vacuna.!"/>
+			                <br />
+			                </div>
+			                <div class="col-xs-12 col-md-3 col-sm-3">
+				                <label>Fecha aplicacion de vacuna</label><br>
+				                <div class="input-group col-md-8">
+									<div class="input-group-addon">
+									    <i class="fa fa-calendar"></i>
+									</div>									
+							  		<input id="date2" class="date2 form-control" name="date" placeholder="YYYY/MM/DD" type="text" data-toggle="tooltip" title="Fecha de aplicacion de vacuna.!"/>
+								</div>
 							</div>
 						</div>
-			                    
-		            </div>
-					<div class="col-xs-12 col-sm-12 col-md-12">
-					<div class="form-group ">
-						
-					</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12">
 					<label>Detalles sobre la aplicacion de la vacuna</label>
 					<textarea id="observacion_vacuna" name="observacion_vacuna" class="observacion_vacuna form-control"  rows="3" placeholder="Descripcion"></textarea>
 					</div>
-
 					<div class="col-xs-12 col-sm-12 col-md-12">
 						<br />
 						<button id="agregar_vacuna" type="text" nombre="agregar_vacuna" class="agregar_vacuna btn btn-dark">Registrar</button>
@@ -575,19 +566,16 @@
               </div>
 				<div id="MascotasAltas" class="tab-pane fade"><!--registro de altas mascotas--><br />
 	                <h3>Registro</h3>
-	                
 	                  <form id="form_mascotas" method="post">
-
 	                  <div class="form-group col-sm-12 col-sm-4 col-md-4">
 		                  <div class="col-md-10 col-sm-10 col-xs-12">
-		                  <h4><label>Datos del cliente</label><br></h4>
+		                  <label>Datos del cliente</label><br>
 		                  	<div class="ui-widget">              
 								<input id="nombre" type="text" name="nombre" class="nombre form-control" data-toggle="tooltip" title="Busca por el nombre del cliente." placeholder="Nombre Cliente"><br />
 			                    <input id="a_paterno" type="text" name="a_paterno" class="a_paterno form-control" placeholder="Apellido Paterno"  readonly><br />
 			                    <input id="a_materno" type="text" name="a_materno" class="a_materno form-control" placeholder="Apellido Materno"  readonly><br />
 			                    <input id="id_cliente" type="hidden"  name="id_cliente" class="id_cliente form-control">
 		                  	</div>
-		                  	 
 		                    </div>
 	                    </div>
 	                    <div class="form-group col-xs-12 col-sm-4 col-md-4">
@@ -661,93 +649,108 @@
 			            	</div>
 			          </div>
 			          </form>
-						        
-	                
 	            </div>
             	<div id="ClientesAltas" class="tab-pane fade"><!--registro de altas de clientes--><br />
 	                <h3>Registro</h3>
-	                
                   	<div class="form-group"><!--datos a ingresar del cliente-->
-                  		<div class="col-xs-12 col-md-4 col-sm-4">
-		                    <label for="">Detalles del Cliente</label><br>
-		                    <div class="col-md-10 col-sm-10">
-		                    <form id="form_conte" method="post">
-		                    	<input type="text" id="nombre_cliente" name="nombre_cliente" class="nombre_cliente form-control" placeholder="Nombre"><br />
-			                    <input type="text" id="a_paterno_cliente" name="a_paterno_cliente" class="a_paterno_cliente form-control" placeholder="Apellido Paterno"><br />
-			                    <input type="text" id="a_materno_cliente" name="a_materno_cliente" class="a_materno_cliente form-control" placeholder="Apellido Materno"><br />
-			                    <input type="text" id="direccion" name="direccion" class="direccion form-control" placeholder="Direccion"><br />
-								<input type="tel" maxlength="10" id="celular" name="celular" class="celular form-control" placeholder="Celular"><br />
-								<input type="tel" maxlength="10" id="telefono" name="telefono" class="telefono form-control" placeholder="Telefono"><br />
-								 <div class="form-group ">
-							<!--menu de fecha de nacimiento-->		      	
-						         	<div class="input-group">
-						       
-						        		<div class="input-group-addon">
-						         			<i class="fa fa-calendar"></i>
-						        		</div>
-
-						       			<input class="date form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text" data-toggle="tooltip" title="Fecha de nacimiento!"/>
-						       		</div>
+                  		<div class="container">
+                  			<form id="form_conte" method="post">
+                  				<div class="row">
+                  					<div class="col-xs-12 col-md-12 col-sm-12">
+                  						<label for="">Detalles del Cliente</label><br>
+                  					</div>
+	                  				<div class="col-xs-12 col-md-4 col-sm-4">
+	                  					<input type="text" id="nombre_cliente" name="nombre_cliente" class="nombre_cliente form-control" placeholder="Nombre"><br />
+	                  					<input type="text" id="direccion" name="direccion" class="direccion form-control" placeholder="Direccion"><br />
+	                  				</div>
+	                  				<div class="col-xs-12 col-md-4 col-sm-4">
+	                  					<input type="text" id="a_paterno_cliente" name="a_paterno_cliente" class="a_paterno_cliente form-control" placeholder="Apellido Paterno"><br />
+	                  					<input type="tel" maxlength="10" id="celular" name="celular" class="celular form-control" placeholder="Celular"><br />
+	                  				</div>
+	                  				<div class="col-xs-12 col-md-4 col-sm-4">
+	                  					<input type="text" id="a_materno_cliente" name="a_materno_cliente" class="a_materno_cliente form-control" placeholder="Apellido Materno"><br />
+	                  					<input type="tel" maxlength="10" id="telefono" name="telefono" class="telefono form-control" placeholder="Telefono"><br />
+	                  				</div>
+	                  				<div class="form-group col-xs-12 col-md-4 col-sm-4"><!--menu de fecha de nacimiento-->		      	
+							         	<div class="input-group">
+							        		<div class="input-group-addon">
+							         			<i class="fa fa-calendar"></i>
+							        		</div>
+							       			<input class="date form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text" data-toggle="tooltip" title="Fecha de nacimiento!"/>
+							       		</div>
+						        	</div>
+						    	</div>
+							    <div class="row">
+									<div class="col-md-1"> 
+						            	<div class="col-xs-12 col-sm-12 col-md-12">
+						            	 	<button id="agregar" type="text" name="agregar" class="agregar btn btn-dark">Registrar</button>
+						            	</div>
+						            </div>
 						        </div>
-
-						    <div class="col-md-1 col-md-offset-3"> 
-			            		<div class="col-xs-12 col-sm-12 col-md-12">
-			            		 	<button id="agregar" type="text" name="agregar" class="agregar btn btn-dark">Registrar</button>
-			            		</div>
-			            	</div>
-						        
-		                    </form>
-		                    
-							</div>
-					     
-			            	
-	                    </div>
-            		</div>
-					</form>
+	                  		</form>
+                  		</div>
+                  	</div>
 	            </div>
 	            <div id="MascotasBajas" class="tab-pane fade"><!--registro para editar o dar de baja mascotas--><br /><br />
                 <h3>Bajas y Edicion de Mascotas</h3>
-                <form id="baja_mascota"  method="post">
-                <br />
-                <div class="input-group col-md-4">
-					  <span class="input-group-addon" id="basic-addon1">Buscar</span>
-					  <input id="buscar_mascota" type="text" name="buscar_mascota" class="buscar_mascota form-control" placeholder="Nombre mascota" aria-describedby="basic-addon1" data-toggle="tooltip" title="Busca por nombre de la mascota.">					
-					  
-				</div>
-
-					<br />	<br />			
-					<div class="col-sm-3 col-md-3 col-xs-12">
-						<label for="">Detalles de la Mascota</label>
-						<input id="id_mascota" type="hidden" name="id_mascota" class="id_mascota form-control"><br />
-						<input id="id_cliente" type="hidden" name="id_cliente" class="id_cliente form-control"><br />
-						<input id="nombre_mascota" type="text" name="nombre_mascota" class="nombre_mascota form-control" placeholder="Nombre de la mascota"><br />
-						<input id="edad_mascota" type="text" name="edad_mascota" class="edad_mascota form-control" placeholder="Edad de la mascota"><br />
-		                <input id="longitud_mascota" type="text" name="longitud_mascota" class="longitud_mascota form-control" placeholder="Longitud de la mascota"><br />
-		                <input id="peso_mascota" type="text" name="peso_mascota" class="peso_mascota form-control" placeholder="Peso de la mascota"><br>
-		                <input id="color_mascota" type="hidden" name="color_mascota" class="color_mascota form-control" placeholder="Color"><br />
-				        <input id="especie" type="hidden" name="especie" class="especie form-control" placeholder="Especie"><br />
-				        <input id="raza" type="hidden" name="raza" class="raza form-control">
-				        <input id="tipo_sangre" type="hidden" name="tipo_sangre" class="tipo_sangre form-control">
-				        <input id="sexo" type="hidden" name="sexo" class="sexo form-control">
-				        <label>Esterilizado</label><br>
-					    <label class="radio-inline col-md-7">
-							<input id="esterilizado" type="text" name="esterilizado" class="esterilizado form-control"  placeholder="Esterilizado">
-						</label><br /><br />					
-					</div>
-
-					  <div class="form-group col-xs-12 col-sm-12 col-md-12">
-		                  <label>Alergias</label><br>
-		                  <div class="col-md-12 col-sm-12 col-xs-12">
-		                  	<input id="alergias" type="text" name="alergias" class="alergias form-control" placeholder="Alergias">
-		                  </div><br /><br />
-		                  <label>Observaciones</label>
-		                  <div class="col-md-12 col-sm-12 col-xs-12">
-		                  	<textarea id="observaciones" name="observaciones" class="observaciones form-control" rows="3" placeholder="Observaciones"></textarea>
-		                  </div>
-	                  </div>
-			        <div class="col-xs-12 col-sm-12 col-md-12">
-			            	<button id="eliminar_mascotas" type="text" name="eliminar_mascotas" class="eliminar_mascotas btn btn-dark">Eliminar</button>			            		
-			         		<button id="editar_mascotas" type="text" name="editar_mascotas" class="editar_mascotas btn btn-dark">Editar</button>
+                <form id="baja_mascota"  method="post"><br />
+                	<div class="container">
+		                <div class="input-group col-md-4">
+							  <span class="input-group-addon" id="basic-addon1">Buscar</span>
+							  <input id="buscar_mascota" type="text" name="buscar_mascota" class="buscar_mascota form-control" placeholder="Nombre mascota" aria-describedby="basic-addon1" data-toggle="tooltip" title="Busca por nombre de la mascota.">
+						</div><br>
+						<input id="id_mascota" type="hidden" name="id_mascota" class="id_mascota form-control">
+						<input id="id_cliente" type="hidden" name="id_cliente" class="id_cliente form-control">
+						<input id="raza" type="hidden" name="raza" class="raza form-control">
+						<input id="color_mascota" type="hidden" name="color_mascota" class="color_mascota form-control" placeholder="Color">
+						<input id="especie" type="hidden" name="especie" class="especie form-control" placeholder="Especie">
+						<input id="sexo" type="hidden" name="sexo" class="sexo form-control">
+						<input id="tipo_sangre" type="hidden" name="tipo_sangre" class="tipo_sangre form-control">
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-xs-12">
+								<label for="">Detalles de la Mascota</label>
+							</div>
+							<div class="col-sm-3 col-md-3 col-xs-12">
+								<input id="nombre_mascota" type="text" name="nombre_mascota" class="nombre_mascota form-control" placeholder="Nombre de la mascota">
+							</div>
+							<div class="col-sm-3 col-md-3 col-xs-12">
+								<input id="edad_mascota" type="text" name="edad_mascota" class="edad_mascota form-control" placeholder="Edad de la mascota">
+							</div>
+							<div class="col-sm-3 col-md-3 col-xs-12">
+								<input id="longitud_mascota" type="text" name="longitud_mascota" class="longitud_mascota form-control" placeholder="Longitud de la mascota">
+							</div>
+							<div class="col-sm-3 col-md-3 col-xs-12">
+								<input id="peso_mascota" type="text" name="peso_mascota" class="peso_mascota form-control" placeholder="Peso de la mascota">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-xs-12">
+								<label>Esterilizado</label>
+							</div>
+							<div class="col-sm-3 col-md-3 col-xs-12">
+								<input id="esterilizado" type="text" name="esterilizado" class="esterilizado form-control"  placeholder="Esterilizado">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-xs-12 col-md-12">
+								<label>Alergias</label><br>
+							</div>
+							<div class="col-sm-12 col-xs-12 col-md-12">
+								<input id="alergias" type="text" name="alergias" class="alergias form-control" placeholder="Alergias">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<label>Observaciones</label>
+							</div>
+							<div class="col-md-12 col-xs-12 col-sm-12">
+								<textarea id="observaciones" name="observaciones" class="observaciones form-control" rows="3" placeholder="Observaciones"></textarea>
+							</div>
+						</div><br>
+				        <div class="col-xs-12 col-sm-12 col-md-12">
+				            <button id="eliminar_mascotas" type="text" name="eliminar_mascotas" class="eliminar_mascotas btn btn-dark">Eliminar</button>			            		
+				         	<button id="editar_mascotas" type="text" name="editar_mascotas" class="editar_mascotas btn btn-dark">Editar</button>
+						</div>
 					</div>
                 </form>
 	            </div>              
@@ -755,7 +758,6 @@
             </div>
         </div>
       </div>
-
     </div><br>
     <div class="container"><!--logo sysvet e informacion de abajo-->
 		<div class="row">

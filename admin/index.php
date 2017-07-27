@@ -231,15 +231,39 @@
                 <h3>Bajas y Edicion de Mascotas</h3>
                 <form action="" method="GET">
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar</button><br>
+                	<div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12">
+                	<label>Detalles del cliente</label><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Nombre" readonly><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Apellido Paterno" readonly><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Apellido Materno" readonly><br>
+                	</div>
+                	</div>
+                	<div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12">
 					<label for="">Detalles de la Mascota</label><br>
+					</div>
 					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
 					<input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
 	                <input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
 	                <input type="text" name="descripcion" class="form-control" placeholder="Longitud" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
 	                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
 	                <input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
 	                <input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
+	                </div>
 	                </div>
 			        <div class="col-xs-12 col-sm-12 col-md-12">
 					<button class="btn btn-default" type="button">Eliminar</button>
@@ -254,11 +278,17 @@
 					<label for="">Detalles del Cliente</label><br>
 					<div class="col-sm-3 col-md-3 col-xs-12">
 					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
-		            <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
-		            <input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
 		            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
-					<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
-					<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
+					</div>
+					<div class="col-sm-3 col-md-3 col-xs-12">
+						<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+						<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
+					</div>
+					<div class="col-sm-3 col-md-3 col-xs-12">
+						<input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
+						<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
+					</div>
+					<div class="col-sm-3 col-md-3 col-xs-12">
 					</div>
 					<div class="col-sm-12 col-md-12 col-xs-12 row">
 						<label>Fecha de nacimiento</label><br />
@@ -314,22 +344,44 @@
               <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
                 <h3>Registro de Vacunas</h3>
                 <form action="" method="GET">
-					<div class="col-xs-12 col-sm-3 col-md-3">
+                	<div class="container">
+                	<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente
 					</button><br><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
-					
+					<label>Detalles del cliente</label>
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota
 					</button><br><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
-					<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
-					</div><br>
+					<label>Detalles de la mascota</label>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
+					</div>
+					<br>
+					</div>
+					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12">
 					<input type="text" name="descripcion" class="form-control" placeholder="Vacuna"><br />
 					<textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
@@ -423,19 +475,26 @@
 	                <h3>Registro</h3>
 	                <form action="" method="GET">
                   	<div class="form-group"><!--datos a ingresar del cliente-->
-                  		<div class="col-xs-12 col-md-4 col-sm-4">
-		                    <label for="">Detalles del Cliente</label><br>
-		                    <div class="col-md-10 col-sm-10">
-		                    <input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
-		                    <input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
-		                    <input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
-		                    <input type="text" name="nombre" class="form-control" placeholder="Direccion"><br />
-							<input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
-							<input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
-							</div>
-							<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
-		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
-		            		<select name="" id="" class="form-control">
+                  		<div class="row">
+                  			<div class="col-md-12 col-sm-12 col-xs-12">
+                  				<label for="">Detalles del Cliente</label><br>
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Direccion"><br />
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
+                  			</div>
+                  			<div class="col-md-6 col-sm-6 col-xs-12">
+                  				<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
+                  				<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
+		            				<select name="" id="" class="form-control">
 			                   	<option value="">1</option>
 			                   	<option value="">2</option>
 			                   	<option value="">3</option>
@@ -443,9 +502,9 @@
 			                   	<option value="">5</option>
 			                   	<option value="">6</option>
 			                   	<option value="">7</option>
-			                </select><br>
-			                </div>
-		                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
+			                		</select><br>
+			                	</div>
+		                		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
 			                    <select name="" id="" class="form-control">
 			                    	<option value="">Enero</option>
 			                    	<option value="">Febrero</option>
@@ -460,8 +519,8 @@
 			                    	<option value="">Noviembre</option>
 			                    	<option value="">Diciembre</option>
 			                    </select><br />
-			                </div>
-			                <div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
+			                	</div>
+			                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
 			            		<select name="" id="" class="form-control">
 				                   	<option value="">2017</option>
 				                   	<option value="">2016</option>
@@ -471,8 +530,9 @@
 				                   	<option value="">2012</option>
 				                   	<option value="">2011</option>
 				                </select>
-			            	</div>
-	                    </div>
+			            		</div>
+                  			</div>
+                  		</div>
             		</div>
 					</form>
 	            </div>
