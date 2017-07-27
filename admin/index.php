@@ -1,6 +1,9 @@
 <?php
 	require('../PHP/config.php');
 	session_start();
+	if($_SESSION['username'] == ""){
+		header("Location: ../index.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +12,14 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel Administrativo</title>
 	<link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet">
+	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="../estilos1.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap337/css/bootstrap.css">
-	<title>Panel Administrativo</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap337/css/bootstrap.css">	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
@@ -650,8 +657,6 @@
 
                   	</div>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bootstrap337/js/bootstrap.min.js"></script>
 </body>
