@@ -51,11 +51,11 @@
 	<script type="text/javascript" src="../js/insertar_diagnosticos.js"></script>
 
 </head>
-<<<<<<< HEAD
+
 <body onload="hora_actual()">
-=======
+
 <body><br><br><br>
->>>>>>> origin/gh-pages
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
 		<div class="container-fluid">
             <div class="navbar-header"><!--navbar con el logo de la clinica-->
