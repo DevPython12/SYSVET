@@ -18,7 +18,6 @@
 	<link rel="stylesheet" href="../estilos1.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap337/css/bootstrap.css">	
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  	
 </head>
 <body><br><br><br>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
@@ -65,7 +64,7 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a href="#Usuario"><span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $_SESSION['username'] ?></a></li>
-                    <li><a href="#Configuracion"><span class="glyphicon glyphicon-cog"></span>&nbsp;Configuracion</a></li>
+                    <!--<li><a href="#Configuracion"><span class="glyphicon glyphicon-cog"></span>&nbsp;Configuracion</a></li>-->
                     <li><a href="../PHP/logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Salir</a></li>
                   </ul>
                 </li>
@@ -79,23 +78,219 @@
         	<div class="tab-content" ><!--formularios de las opciones-->
         		<div id="Administracion" class="tab-pane fade"><!--panel de administracion-->
         			<h3>Herramientas administrativas</h3>
-        			<div class="col-xs-12 col-md-4 col-sm-4">
+        			<div class="col-xs-12 col-md-12 col-sm-12">
         				<h4>Administracion clinica</h4>
         				<div class="col-xs-12 col-md-12 col-sm-12">
-        					<table>
-        						<ul>
-        							<li><a data-toggle="tab" href="#ClientesBajas">Usuarios</a></li>
-        						</ul>
-        						<ul>
-        							<li><a data-toggle="tab" href="#ClientesBajas">Medicos</a></li>
-        						</ul>
-        						<ul>
-        							<li><a data-toggle="tab" href="#ClientesBajas">Bajas/Editar</a></li>
-        						</ul>
-        						<ul>
-        							<li><a data-toggle="tab" href="#ClientesBajas">Empleados</a></li>
-        						</ul>
+        					<table class="table table-stripped">
+	        					<tbody>
+	        						<th><a href="#Usuarios" data-toggle="tab">Usuarios <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#Medicos" data-toggle="tab">Medicos <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#ClientesBajas2" data-toggle="tab">Bajas/Editar Clientes <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#Empleados" data-toggle="tab">Empleados <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        					</tbody>
         					</table>
+        				</div>
+        				<div class="container">
+        					<div class="row">
+        						<div class="col-xs-12 col-sm-12 col-md-12">
+        							<div class="tab-content">
+        								<div id="Usuarios" class="tab-pane fade">
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Usuario</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre de usuario</th>
+        											<th>Dueño de la cuenta</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Usuario1</th>
+        												<th>Alexandro Ayala Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+        								</div>
+        								<div id="Medicos" class="tab-pane fade">
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Medico</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+        								</div>
+        								<div id="Empleados" class="tab-pane fade">
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Empleado</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+        								</div>
+        								<div id="ClientesBajas2" class="tab-pane fade"><!-- formulario para dar de baja el cliente-->
+							                <div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Cliente</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table><!--
+							                <h3>Bajas y Edicion de Clientes</h3>
+							                <form action="" method="GET">
+							                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br>
+												<label for="">Detalles del Cliente</label><br>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+												<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
+									            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+													<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+													<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+													<input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
+													<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+												</div>
+												<div class="col-sm-12 col-md-12 col-xs-12 row">
+													<label>Fecha de nacimiento</label><br />
+												</div>
+												<div class="col-xs-12 col-md-12 col-sm-12">
+												<div class="col-md-4 col-sm-4 col-xs-12">--><!--menu de fecha de nacimiento
+									            		<div class="col-md-4 col-xs-12 col-sm-4">menu de dias
+									            		<select name="" id="" class="form-control">
+										                   	<option value="">1</option>
+										                   	<option value="">2</option>
+										                   	<option value="">3</option>
+										                   	<option value="">4</option>
+										                   	<option value="">5</option>
+										                   	<option value="">6</option>
+										                   	<option value="">7</option>
+										                </select><br>
+										                </div>
+									                	<div class="col-md-4 col-xs-12 col-sm-4">
+										                    <select name="" id="" class="form-control">
+										                    	<option value="">Enero</option>
+										                    	<option value="">Febrero</option>
+										                    	<option value="">Marzo</option>
+										                    	<option value="">Abril</option>
+										                    	<option value="">Mayo</option>
+										                    	<option value="">Junio</option>
+										                    	<option value="">Julio</option>
+										                    	<option value="">Agosto</option>
+										                    	<option value="">Septiembre</option>
+										                    	<option value="">Octubre</option>
+										                    	<option value="">Noviembre</option>
+										                    	<option value="">Diciembre</option>
+										                    </select><br />
+										                </div>
+										                <div class="col-md-4 col-xs-12 col-sm-4">
+										            		<select name="" id="" class="form-control">
+											                   	<option value="">2017</option>
+											                   	<option value="">2016</option>
+											                   	<option value="">2015</option>
+											                   	<option value="">2014</option>
+											                   	<option value="">2013</option>
+											                   	<option value="">2012</option>
+											                   	<option value="">2011</option>
+											                </select><br>
+										            	</div>
+										            	</div><br>
+										        <div class="col-xs-12 col-sm-12 col-md-12">
+												<button class="btn btn-default" type="button">Eliminar</button>
+												<button class="btn btn-default" type="button">Editar</button>
+												</div>
+												</div>
+							                </form>-->
+							            </div>
+        							</div>
+        						</div>
+        					</div>
         				</div>
         			</div>
         		</div>
@@ -268,76 +463,6 @@
 			        <div class="col-xs-12 col-sm-12 col-md-12">
 					<button class="btn btn-default" type="button">Eliminar</button>
 					<button class="btn btn-default" type="button">Editar</button>
-					</div>
-                </form>
-              </div>
-              <div id="ClientesBajas" class="tab-pane fade"><!-- formulario para dar de baja el cliente-->
-                <h3>Bajas y Edicion de Clientes</h3>
-                <form action="" method="GET">
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br>
-					<label for="">Detalles del Cliente</label><br>
-					<div class="col-sm-3 col-md-3 col-xs-12">
-					<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
-		            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
-					</div>
-					<div class="col-sm-3 col-md-3 col-xs-12">
-						<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
-						<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
-					</div>
-					<div class="col-sm-3 col-md-3 col-xs-12">
-						<input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
-						<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
-					</div>
-					<div class="col-sm-3 col-md-3 col-xs-12">
-					</div>
-					<div class="col-sm-12 col-md-12 col-xs-12 row">
-						<label>Fecha de nacimiento</label><br />
-					</div>
-					<div class="col-xs-12 col-md-12 col-sm-12">
-					<div class="col-md-4 col-sm-4 col-xs-12"><!--menu de fecha de nacimiento-->
-		            		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
-		            		<select name="" id="" class="form-control">
-			                   	<option value="">1</option>
-			                   	<option value="">2</option>
-			                   	<option value="">3</option>
-			                   	<option value="">4</option>
-			                   	<option value="">5</option>
-			                   	<option value="">6</option>
-			                   	<option value="">7</option>
-			                </select><br>
-			                </div>
-		                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
-			                    <select name="" id="" class="form-control">
-			                    	<option value="">Enero</option>
-			                    	<option value="">Febrero</option>
-			                    	<option value="">Marzo</option>
-			                    	<option value="">Abril</option>
-			                    	<option value="">Mayo</option>
-			                    	<option value="">Junio</option>
-			                    	<option value="">Julio</option>
-			                    	<option value="">Agosto</option>
-			                    	<option value="">Septiembre</option>
-			                    	<option value="">Octubre</option>
-			                    	<option value="">Noviembre</option>
-			                    	<option value="">Diciembre</option>
-			                    </select><br />
-			                </div>
-			                <div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
-			            		<select name="" id="" class="form-control">
-				                   	<option value="">2017</option>
-				                   	<option value="">2016</option>
-				                   	<option value="">2015</option>
-				                   	<option value="">2014</option>
-				                   	<option value="">2013</option>
-				                   	<option value="">2012</option>
-				                   	<option value="">2011</option>
-				                </select><br>
-			            	</div>
-			            	</div><br>
-			        <div class="col-xs-12 col-sm-12 col-md-12">
-					<button class="btn btn-default" type="button">Eliminar</button>
-					<button class="btn btn-default" type="button">Editar</button>
-					</div>
 					</div>
                 </form>
               </div>

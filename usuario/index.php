@@ -49,13 +49,9 @@
 	<script type="text/javascript" src="../js/actualizar_mascotas.js"></script>
 	<script type="text/javascript" src="../js/insertar_vacunas.js"></script>
 	<script type="text/javascript" src="../js/insertar_diagnosticos.js"></script>
-
 </head>
-
 <body onload="hora_actual()">
-
 <body><br><br><br>
-
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--opciones de navegacion del navbar-->
 		<div class="container-fluid">
             <div class="navbar-header"><!--navbar con el logo de la clinica-->
@@ -766,7 +762,6 @@
     		</div>
     	</div>
     </div>
-
 	<div class="modal fade" id="NuevaNota" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><!-- Modal para nueva nota-->
 					  <div class="modal-dialog" role="document">
 					    <div class="modal-content">
