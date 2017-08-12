@@ -6,7 +6,7 @@
 -- Tiempo de generación: 27-07-2017 a las 04:18:48
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
-
+use sysvet;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -45,9 +45,11 @@ END$$
 
 CREATE PROCEDURE `SP_historial_consulta` (IN `id_mascota` INT)  BEGIN
 
-SELECT CONCAT(DM.nombre,' ',DM.apellido_paterno,' ', DM.apellido_materno) AS Veterinario,motivo, fecha, hora, sintomas, CONCAT("Actitud:",actitud,". Condicion Cuerpo:",condicion_cuerpo,". Hidratacion:",hidratacion,". Mucosas:",mucosas,". Ojos:",ojos,
-". Odios:",odios,". Nodulos:",nodulos,". Piel:",piel,". Locomocion:",locomocion,". Musculo:",musculo,". SistemaNervioso:",s_nervioso,". SistemaCardiovascular:",s_cardiovascular,". SistemaRespiratorio:",s_respiratorio,
-". SistemaDigestivo:",s_digestivo,". SistemaGenitourinario:",s_genitourinario) AS "Examen Fisico",diagnostico,tratamiento, instrucciones, costo
+SELECT CONCAT(DM.nombre,' ',DM.apellido_paterno,' ', DM.apellido_materno) AS Veterinario,motivo, fecha, hora, sintomas, CONCAT("Actitud:",actitud,
+". Condicion Cuerpo:",condicion_cuerpo,". Hidratacion:",hidratacion,". Mucosas:",mucosas,". Ojos:",ojos,
+". Odios:",odios,". Nodulos:",nodulos,". Piel:",piel,". Locomocion:",locomocion,". Musculo:",musculo,
+". SistemaNervioso:",s_nervioso,". SistemaCardiovascular:",s_cardiovascular,". SistemaRespiratorio:",s_respiratorio,
+". SistemaDigestivo:",s_digestivo,". SistemaGenitourinario:",s_genitourinario) AS 'Examen Fisico',diagnostico,tratamiento, instrucciones, costo
 FROM consultas AS C
 INNER JOIN datos_medico AS DM ON C.id_medico=DM.id_medico
 WHERE C.id_paciente = id_mascota;
