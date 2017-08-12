@@ -25,7 +25,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Panel Administrativo</title>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet">\
 
     <link rel="stylesheet" href="../estilos1.css">
@@ -117,7 +121,18 @@
     <script type="text/javascript" src="../js/insertar_medicamentos_admin.js"></script>
 
     <script type="text/javascript" src="../js/insertar_vacuna_admin.js"></script>
+<<<<<<< HEAD
 
+=======
+=======
+	<link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet">
+	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="../estilos1.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap337/css/bootstrap.css">	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
 </head>
 
 <body><br><br>
@@ -231,6 +246,7 @@
       <div class="row">
 
         <div class="col-sm-12 col-md-12 col-xs-12">
+<<<<<<< HEAD
 
           <div class="tab-content" ><!--formularios de las opciones-->
 
@@ -256,6 +272,21 @@
 
                       <th><a href="#Empleados" data-toggle="tab">Empleados <span class="glyphicon glyphicon-chevron-down"></span></a></th>
 
+=======
+        	<div class="tab-content" ><!--formularios de las opciones-->
+        		<div id="Administracion" class="tab-pane fade"><!--panel de administracion-->
+        			<h3>Herramientas administrativas</h3>
+        			<div class="col-xs-12 col-md-12 col-sm-12">
+        				<h4>Administracion clinica</h4>
+        				<div class="col-xs-12 col-md-12 col-sm-12">
+        					<table class="table table-stripped">
+	        					<tbody>
+	        						<th><a href="#Usuarios" data-toggle="tab">Usuarios <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#Medicos" data-toggle="tab">Medicos <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+<<<<<<< HEAD
+	        						<th><a href="#Clientes" data-toggle="tab">Clientes<span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#Empleados" data-toggle="tab">Empleados <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+>>>>>>> origin/gh-pages
                       <th><a href="#Notas" data-toggle="tab">Notas<span class="glyphicon glyphicon-chevron-down"></span></a></th>
 
                       <th><a href="#Medicamentos" data-toggle="tab">Medicamentos<span class="glyphicon glyphicon-chevron-down"></span></a></th>
@@ -263,6 +294,7 @@
                       <th><a href="#admin_consultas" data-toggle="tab">Consultas<span class="glyphicon glyphicon-chevron-down"></span></a></th>
 
                       <th><a href="#admin_vacunas" data-toggle="tab">Vacunas<span class="glyphicon glyphicon-chevron-down"></span></a></th>
+<<<<<<< HEAD
 
                     </tbody>
 
@@ -282,6 +314,22 @@
 
                           <div class="col-md-12">
 
+=======
+=======
+	        						<th><a href="#ClientesBajas2" data-toggle="tab">Bajas/Editar Clientes <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+	        						<th><a href="#Empleados" data-toggle="tab">Empleados <span class="glyphicon glyphicon-chevron-down"></span></a></th>
+>>>>>>> origin/gh-pages
+	        					</tbody>
+        					</table>
+        				</div>
+        				<div class="container">
+        					<div class="row">
+        						<div class="col-xs-12 col-sm-12 col-md-12">
+        							<div class="tab-content">
+        								<div id="Usuarios" class="tab-pane fade">
+<<<<<<< HEAD
+        									<div class="col-md-12">
+>>>>>>> origin/gh-pages
                             <div class="col-sm-3 col-xs-12 col-md-3">
 
                               <div class="input-group">
@@ -357,6 +405,7 @@
 
 
                         
+<<<<<<< HEAD
 
                         <div id="Medicos" class="tab-pane fade">
 
@@ -376,6 +425,49 @@
 
                           </div>
 
+=======
+=======
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Usuario</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre de usuario</th>
+        											<th>Dueño de la cuenta</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Usuario1</th>
+        												<th>Alexandro Ayala Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+        								</div>
+>>>>>>> origin/gh-pages
+        								<div id="Medicos" class="tab-pane fade">
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
                                 <a data-toggle="modal" href="#agregar_medico" class="btn btn-default">Nuevo medico</a>
 
                                 <a onclick="cargar('#tabla_medicos','../PHP/tabla_medicos.php')" class="btn btn-default">Actualizar tabla medicos</a>
@@ -392,6 +484,7 @@
 
                             </div>
 
+<<<<<<< HEAD
 
 
                         </div>
@@ -416,6 +509,44 @@
 
                           
 
+=======
+=======
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Medico</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+>>>>>>> origin/gh-pages
+        								</div>
+        								<div id="Empleados" class="tab-pane fade">
+        									<div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+											    </div>
+        									</div>
+<<<<<<< HEAD
+        									
+>>>>>>> origin/gh-pages
                               <a data-toggle="modal" href="#agregar_empleados" class="btn btn-default">Nuevo empleado</a>
 
                               <a onclick="cargar('#tabla_empleado','../PHP/tabla_empleados.php')" class="btn btn-default">Actualizar tabla empleados</a>
@@ -430,6 +561,7 @@
 
                               </div>
 
+<<<<<<< HEAD
 
 
                         </div>
@@ -454,6 +586,46 @@
 
                           </div>
 
+=======
+        								</div>
+
+        								<div id="Clientes" class="tab-pane fade">
+=======
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Empleado</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table>
+        								</div>
+        								<div id="ClientesBajas2" class="tab-pane fade"><!-- formulario para dar de baja el cliente-->
+>>>>>>> origin/gh-pages
+							                <div class="col-sm-3 col-xs-12 col-md-3">
+        										<div class="input-group">
+												    <input type="text" class="form-control" placeholder="Buscar">
+												    <span class="input-group-btn">
+												    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												    </span>
+<<<<<<< HEAD
+											    </div>                         
+        									</div>
+>>>>>>> origin/gh-pages
                               <a onclick="cargar('#tabla_clientes','../PHP/tabla_clientes.php')" class="btn btn-default">Actualizar tabla clientes</a>
 
                             <br><br>
@@ -595,6 +767,110 @@
 
 
                                         </div>                               
+<<<<<<< HEAD
+=======
+=======
+											    </div>
+        									</div>
+        									<div class="col-md-3 col-sm-3 col-xs-12">
+        										<button class="btn btn-default" type="button">Nuevo Cliente</button>
+        									</div><br><br>
+        									<table class="table table-stripped">
+        										<tbody>
+        											<tr>
+        											<th>Nombre</th>
+        											<th>Apellido Paterno</th>
+        											<th>Apellido Materno</th>
+        											<th>Opciones</th>
+        											</tr>
+        											<tr>
+        												<th>Alexandro</th>
+        												<th>Ayala</th>
+        												<th>Rodriguez</th>
+        												<th>
+	        												<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+	        												<a href=""><span class="glyphicon glyphicon-remove"></span></a>
+        												</th>
+        											</tr>
+        										</tbody>
+        									</table><!--
+							                <h3>Bajas y Edicion de Clientes</h3>
+							                <form action="" method="GET">
+							                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar</button><br>
+												<label for="">Detalles del Cliente</label><br>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+												<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br />
+									            <input type="text" name="nombre" class="form-control" placeholder="Direccion" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+													<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno" readonly><br />
+													<input type="text" name="nombre" class="form-control" placeholder="Celular" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+													<input type="text" name="precio" class="form-control" placeholder="Apellido Materno" readonly><br />
+													<input type="text" name="nombre" class="form-control" placeholder="Telefono" readonly><br />
+												</div>
+												<div class="col-sm-3 col-md-3 col-xs-12">
+												</div>
+												<div class="col-sm-12 col-md-12 col-xs-12 row">
+													<label>Fecha de nacimiento</label><br />
+												</div>
+												<div class="col-xs-12 col-md-12 col-sm-12">
+												<div class="col-md-4 col-sm-4 col-xs-12">--><!--menu de fecha de nacimiento
+									            		<div class="col-md-4 col-xs-12 col-sm-4">menu de dias
+									            		<select name="" id="" class="form-control">
+										                   	<option value="">1</option>
+										                   	<option value="">2</option>
+										                   	<option value="">3</option>
+										                   	<option value="">4</option>
+										                   	<option value="">5</option>
+										                   	<option value="">6</option>
+										                   	<option value="">7</option>
+										                </select><br>
+										                </div>
+									                	<div class="col-md-4 col-xs-12 col-sm-4">
+										                    <select name="" id="" class="form-control">
+										                    	<option value="">Enero</option>
+										                    	<option value="">Febrero</option>
+										                    	<option value="">Marzo</option>
+										                    	<option value="">Abril</option>
+										                    	<option value="">Mayo</option>
+										                    	<option value="">Junio</option>
+										                    	<option value="">Julio</option>
+										                    	<option value="">Agosto</option>
+										                    	<option value="">Septiembre</option>
+										                    	<option value="">Octubre</option>
+										                    	<option value="">Noviembre</option>
+										                    	<option value="">Diciembre</option>
+										                    </select><br />
+										                </div>
+										                <div class="col-md-4 col-xs-12 col-sm-4">
+										            		<select name="" id="" class="form-control">
+											                   	<option value="">2017</option>
+											                   	<option value="">2016</option>
+											                   	<option value="">2015</option>
+											                   	<option value="">2014</option>
+											                   	<option value="">2013</option>
+											                   	<option value="">2012</option>
+											                   	<option value="">2011</option>
+											                </select><br>
+										            	</div>
+										            	</div><br>
+										        <div class="col-xs-12 col-sm-12 col-md-12">
+												<button class="btn btn-default" type="button">Eliminar</button>
+												<button class="btn btn-default" type="button">Editar</button>
+												</div>
+												</div>
+							                </form>-->
+							            </div>
+>>>>>>> origin/gh-pages
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+>>>>>>> origin/gh-pages
 
                       </div>
 
@@ -1400,7 +1676,11 @@
               <div id="MascotasBajas" class="tab-pane fade"><!--registro para editar o dar de baja mascotas-->
 
                 <h3>Bajas y Edicion de Mascotas</h3>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
                 <form id="baja_mascota"  method="post"><br />
 
                   <div class="container">
@@ -1648,7 +1928,99 @@
             <button id="agregar_vacuna" type="text" nombre="agregar_vacuna" class="agregar_vacuna btn btn-dark">Registrar</button>
 
           </div>
+<<<<<<< HEAD
 
+=======
+=======
+                <form action="" method="GET">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotayCliente">Buscar</button><br>
+                	<div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12">
+                	<label>Detalles del cliente</label><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Nombre" readonly><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Apellido Paterno" readonly><br>
+                	</div>
+                	<div class="col-sm-3 col-md-3 col-xs-12">
+                		<input type="text" name="" class="form-control" placeholder="Apellido Materno" readonly><br>
+                	</div>
+                	</div>
+                	<div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12">
+					<label for="">Detalles de la Mascota</label><br>
+					</div>
+					<div class="col-sm-3 col-md-3 col-xs-12">
+					<input type="text" name="descripcion" class="form-control" placeholder="Nombre" readonly><br />
+					<input type="text" name="descripcion" class="form-control" placeholder="Edad" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                <input type="text" name="nombre" class="form-control" placeholder="Color" readonly><br />
+	                <input type="text" name="descripcion" class="form-control" placeholder="Longitud" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                <input type="text" name="descripcion" class="form-control" placeholder="Peso" readonly><br>
+	                <input type="text" name="descripcion" class="form-control" placeholder="Raza" readonly><br />
+	                </div>
+	                <div class="col-sm-3 col-md-3 col-xs-12">
+	                <input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br />
+	                </div>
+	                </div>
+			        <div class="col-xs-12 col-sm-12 col-md-12">
+					<button class="btn btn-default" type="button">Eliminar</button>
+					<button class="btn btn-default" type="button">Editar</button>
+					</div>
+                </form>
+              </div>
+              <div id="MascotasVacunas" class="tab-pane fade"><!--registro de vacunas de la mascota-->
+                <h3>Registro de Vacunas</h3>
+                <form action="" method="GET">
+                	<div class="container">
+                	<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarCliente">Buscar Cliente
+					</button><br><br>
+					<label>Detalles del cliente</label>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Paterno" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Apellido Materno" readonly><br>
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#BuscarMascotaVacunas">Buscar Mascota
+					</button><br><br>
+					<label>Detalles de la mascota</label>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Nombre" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Edad" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Tipo de mascota" readonly><br>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<input type="text" name="nombre" class="form-control" placeholder="Raza" readonly><br>
+					</div>
+					<br>
+					</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12">
+					<input type="text" name="descripcion" class="form-control" placeholder="Vacuna"><br />
+					<textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
+					</div>
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
                 </form>
 
               </div>
@@ -1822,11 +2194,17 @@
                 </div>
 
                 </form>
+<<<<<<< HEAD
 
               </div>
 
               <div id="ClientesAltas" class="tab-pane fade"><!--registro de altas de clientes-->
 
+=======
+	            </div>
+            	<div id="ClientesAltas" class="tab-pane fade"><!--registro de altas de clientes-->
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
                   <h3>Registro</h3>
 
                     <div class="form-group"><!--datos a ingresar del cliente-->
@@ -1904,9 +2282,78 @@
                       </div>
 
                     </div>
+<<<<<<< HEAD
 
               </div>
 
+=======
+=======
+	                <h3>Registro</h3>
+	                <form action="" method="GET">
+                  	<div class="form-group"><!--datos a ingresar del cliente-->
+                  		<div class="row">
+                  			<div class="col-md-12 col-sm-12 col-xs-12">
+                  				<label for="">Detalles del Cliente</label><br>
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="nombre" class="form-control" placeholder="Nombre"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Direccion"><br />
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="descripcion" class="form-control" placeholder="Apellido Paterno"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Celular"><br />
+                  			</div>
+                  			<div class="col-md-3 col-sm-3 col-xs-12">
+                  				<input type="text" name="precio" class="form-control" placeholder="Apellido Materno"><br />
+                  				<input type="text" name="nombre" class="form-control" placeholder="Telefono"><br />
+                  			</div>
+                  			<div class="col-md-6 col-sm-6 col-xs-12">
+                  				<label>Fecha de nacimiento</label><br /><!--menu de fecha de nacimiento-->
+                  				<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de dias-->
+		            				<select name="" id="" class="form-control">
+			                   	<option value="">1</option>
+			                   	<option value="">2</option>
+			                   	<option value="">3</option>
+			                   	<option value="">4</option>
+			                   	<option value="">5</option>
+			                   	<option value="">6</option>
+			                   	<option value="">7</option>
+			                		</select><br>
+			                	</div>
+		                		<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de meses-->
+			                    <select name="" id="" class="form-control">
+			                    	<option value="">Enero</option>
+			                    	<option value="">Febrero</option>
+			                    	<option value="">Marzo</option>
+			                    	<option value="">Abril</option>
+			                    	<option value="">Mayo</option>
+			                    	<option value="">Junio</option>
+			                    	<option value="">Julio</option>
+			                    	<option value="">Agosto</option>
+			                    	<option value="">Septiembre</option>
+			                    	<option value="">Octubre</option>
+			                    	<option value="">Noviembre</option>
+			                    	<option value="">Diciembre</option>
+			                    </select><br />
+			                	</div>
+			                	<div class="col-md-4 col-xs-12 col-sm-4"><!--menu de años-->
+			            		<select name="" id="" class="form-control">
+				                   	<option value="">2017</option>
+				                   	<option value="">2016</option>
+				                   	<option value="">2015</option>
+				                   	<option value="">2014</option>
+				                   	<option value="">2013</option>
+				                   	<option value="">2012</option>
+				                   	<option value="">2011</option>
+				                </select>
+			            		</div>
+                  			</div>
+                  		</div>
+            		</div>
+					</form>
+>>>>>>> origin/gh-pages
+	            </div>
+>>>>>>> origin/gh-pages
             </div>
 
         </div>
