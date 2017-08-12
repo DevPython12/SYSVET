@@ -15,6 +15,7 @@ if($row = $result->fetch_array()) {
 	{
 		session_start();
 		$_SESSION['username'] = $username;
+		$_SESSION['id_usuario'] = $row['id_usuario'];
 
 		echo  '<script>
 					alert("Ingreso correcto");
@@ -25,6 +26,7 @@ if($row = $result->fetch_array()) {
 	else if($row['contrasena'] == $password && $row['privilegio'] == 0){
 		session_start();
 		$_SESSION['username'] = $username;
+		$_SESSION['id_usuario'] = $row['id_usuario'];
 
 		echo  '<script>
 					alert("Ingreso correcto");

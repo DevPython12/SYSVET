@@ -24,7 +24,7 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_cliente_mascota` (`id_mascota` INT)  BEGIN
+CREATE PROCEDURE `SP_cliente_mascota` (`id_mascota` INT)  BEGIN
 
 SELECT C.nombre, C.apellido_paterno, C.apellido_materno, C.telefono
 FROM pacientes AS P
@@ -33,7 +33,7 @@ WHERE id_paciente=id_mascota;
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_diagnostico` (`diagnostico` INT)  BEGIN
+CREATE PROCEDURE `SP_diagnostico` (`diagnostico` INT)  BEGIN
 
 SELECT nombre_enfermedad, DE.comentarios
 FROM diagnosticos_enfermedades AS DE
@@ -43,7 +43,7 @@ WHERE D.id_diagnostico=diagnostico;
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_historial_consulta` (IN `id_mascota` INT)  BEGIN
+CREATE PROCEDURE `SP_historial_consulta` (IN `id_mascota` INT)  BEGIN
 
 SELECT CONCAT(DM.nombre,' ',DM.apellido_paterno,' ', DM.apellido_materno) AS Veterinario,motivo, fecha, hora, sintomas, CONCAT("Actitud:",actitud,". Condicion Cuerpo:",condicion_cuerpo,". Hidratacion:",hidratacion,". Mucosas:",mucosas,". Ojos:",ojos,
 ". Odios:",odios,". Nodulos:",nodulos,". Piel:",piel,". Locomocion:",locomocion,". Musculo:",musculo,". SistemaNervioso:",s_nervioso,". SistemaCardiovascular:",s_cardiovascular,". SistemaRespiratorio:",s_respiratorio,
@@ -54,7 +54,7 @@ WHERE C.id_paciente = id_mascota;
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_receta` (`receta` INT)  BEGIN
+CREATE PROCEDURE `SP_receta` (`receta` INT)  BEGIN
 
 SELECT nombre_generico, RM.cantidad, RM.frecuencia, RM.duracion, RM.comentarios
 FROM recetas_medicamentos AS RM
@@ -63,7 +63,7 @@ INNER JOIN recetas AS R ON RM.id_receta=R.id_receta
 WHERE R.id_receta=receta;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_receta_consulta` (IN `id_mascota` INT)  SELECT fecha AS "Fecha Consulta", GROUP_CONCAT(DISTINCT M.nombre_generico) AS Medicamentos, GROUP_CONCAT(DISTINCT RM.cantidad) AS Cantidad, GROUP_CONCAT(DISTINCT RM.frecuencia) AS Frecuencia, 
+CREATE PROCEDURE `SP_receta_consulta` (IN `id_mascota` INT)  SELECT fecha AS "Fecha Consulta", GROUP_CONCAT(DISTINCT M.nombre_generico) AS Medicamentos, GROUP_CONCAT(DISTINCT RM.cantidad) AS Cantidad, GROUP_CONCAT(DISTINCT RM.frecuencia) AS Frecuencia, 
 GROUP_CONCAT(DISTINCT RM.duracion) AS Duracion, GROUP_CONCAT(DISTINCT RM.comentarios) AS Comentarios
 FROM consultas AS C
 INNER JOIN recetas_medicamentos AS RM ON C.id_receta=RM.id_receta
@@ -71,7 +71,7 @@ INNER JOIN info_medicamentos AS M ON RM.id_info_medicamento=M.id_info_medicament
 WHERE C.id_paciente = id_mascota
 GROUP BY C.id_consulta$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_vacuna` (`id_mascota` INT)  BEGIN
+CREATE  PROCEDURE `SP_vacuna` (`id_mascota` INT)  BEGIN
 
 SELECT nombre, VP.fecha_aplicacion, VP.observaciones
 FROM vacunas_pacientes AS VP
@@ -87,7 +87,7 @@ DELIMITER ;
 -- Estructura de tabla para la tabla `camas`
 --
 
-CREATE TABLE `camas` (
+CREATE TABLE IF NOT EXISTS `camas` (
   `id_cama` int(11) NOT NULL,
   `num_cama` int(11) NOT NULL,
   `id_tipo_cama` int(11) NOT NULL
@@ -99,7 +99,7 @@ CREATE TABLE `camas` (
 -- Estructura de tabla para la tabla `camas_internos`
 --
 
-CREATE TABLE `camas_internos` (
+CREATE TABLE IF NOT EXISTS `camas_internos` (
   `id_cama_interno` int(11) NOT NULL,
   `id_cama` int(11) NOT NULL,
   `id_interno` int(11) NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE `camas_internos` (
 -- Estructura de tabla para la tabla `clientes`
 --
 
-CREATE TABLE `clientes` (
+CREATE TABLE IF NOT EXISTS `clientes` (
   `id_cliente` int(11) NOT NULL,
   `nombre` varchar(30) NOT NULL,
   `apellido_paterno` varchar(20) NOT NULL,
@@ -151,7 +151,7 @@ INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido_paterno`, `apellido_ma
 -- Estructura de tabla para la tabla `clinicas`
 --
 
-CREATE TABLE `clinicas` (
+CREATE TABLE IF NOT EXISTS `clinicas` (
   `id_clinica` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
   `direccion` varchar(150) DEFAULT NULL,
@@ -172,7 +172,7 @@ INSERT INTO `clinicas` (`id_clinica`, `nombre`, `direccion`, `telefono`, `ciudad
 -- Estructura de tabla para la tabla `clinicas_empleados`
 --
 
-CREATE TABLE `clinicas_empleados` (
+CREATE TABLE IF NOT EXISTS `clinicas_empleados` (
   `id_clinica_empleado` int(11) NOT NULL,
   `id_clinica` int(11) NOT NULL,
   `id_empleado` int(11) NOT NULL,
@@ -185,7 +185,7 @@ CREATE TABLE `clinicas_empleados` (
 -- Estructura de tabla para la tabla `consultas`
 --
 
-CREATE TABLE `consultas` (
+CREATE TABLE IF NOT EXISTS `consultas` (
   `id_consulta` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `id_medico` int(11) NOT NULL,
@@ -229,7 +229,7 @@ INSERT INTO `consultas` (`id_consulta`, `id_paciente`, `id_medico`, `id_receta`,
 -- Estructura de tabla para la tabla `contratos`
 --
 
-CREATE TABLE `contratos` (
+CREATE TABLE IF NOT EXISTS `contratos` (
   `id_contrato` int(11) NOT NULL,
   `id_nomina` int(11) NOT NULL,
   `id_empleado` int(11) NOT NULL,
@@ -244,7 +244,7 @@ CREATE TABLE `contratos` (
 -- Estructura de tabla para la tabla `datos_empleados`
 --
 
-CREATE TABLE `datos_empleados` (
+CREATE TABLE IF NOT EXISTS `datos_empleados` (
   `id_empleado` int(11) NOT NULL,
   `nombre` varchar(30) NOT NULL,
   `apellido_paterno` varchar(20) NOT NULL,
@@ -271,7 +271,7 @@ INSERT INTO `datos_empleados` (`id_empleado`, `nombre`, `apellido_paterno`, `ape
 -- Estructura Stand-in para la vista `datos_medico`
 -- (Véase abajo para la vista actual)
 --
-CREATE TABLE `datos_medico` (
+CREATE TABLE IF NOT EXISTS `datos_medico` (
 `id_medico` int(11)
 ,`nombre` varchar(30)
 ,`apellido_paterno` varchar(20)
@@ -285,7 +285,7 @@ CREATE TABLE `datos_medico` (
 -- Estructura de tabla para la tabla `departamentos`
 --
 
-CREATE TABLE `departamentos` (
+CREATE TABLE IF NOT EXISTS `departamentos` (
   `id_departamento` int(11) NOT NULL,
   `nombre` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -303,7 +303,7 @@ INSERT INTO `departamentos` (`id_departamento`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `diagnosticos`
 --
 
-CREATE TABLE `diagnosticos` (
+CREATE TABLE IF NOT EXISTS `diagnosticos` (
   `id_diagnostico` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -314,7 +314,7 @@ CREATE TABLE `diagnosticos` (
 -- Estructura de tabla para la tabla `diagnosticos_enfermedades`
 --
 
-CREATE TABLE `diagnosticos_enfermedades` (
+CREATE TABLE IF NOT EXISTS `diagnosticos_enfermedades` (
   `id_diagnostico_enfermedad` int(11) NOT NULL,
   `id_enfermedad` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
@@ -327,7 +327,7 @@ CREATE TABLE `diagnosticos_enfermedades` (
 -- Estructura de tabla para la tabla `enfermedades`
 --
 
-CREATE TABLE `enfermedades` (
+CREATE TABLE IF NOT EXISTS `enfermedades` (
   `id_enfermedad` int(10) UNSIGNED NOT NULL,
   `nombre_enfermedad` varchar(90) NOT NULL,
   `descripcion` text
@@ -351,7 +351,7 @@ INSERT INTO `enfermedades` (`id_enfermedad`, `nombre_enfermedad`, `descripcion`)
 -- Estructura de tabla para la tabla `especialidades`
 --
 
-CREATE TABLE `especialidades` (
+CREATE TABLE IF NOT EXISTS `especialidades` (
   `id_especialidad` int(11) NOT NULL,
   `nombre` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -362,7 +362,7 @@ CREATE TABLE `especialidades` (
 -- Estructura de tabla para la tabla `historial`
 --
 
-CREATE TABLE `historial` (
+CREATE TABLE IF NOT EXISTS `historial` (
   `id_historial` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -373,7 +373,7 @@ CREATE TABLE `historial` (
 -- Estructura de tabla para la tabla `horarios`
 --
 
-CREATE TABLE `horarios` (
+CREATE TABLE IF NOT EXISTS `horarios` (
   `id_horario` int(11) NOT NULL,
   `lunes` varchar(15) DEFAULT NULL,
   `martes` varchar(15) DEFAULT NULL,
@@ -389,7 +389,7 @@ CREATE TABLE `horarios` (
 -- Estructura de tabla para la tabla `info_medicamentos`
 --
 
-CREATE TABLE `info_medicamentos` (
+CREATE TABLE IF NOT EXISTS `info_medicamentos` (
   `id_info_medicamento` int(11) NOT NULL,
   `nombre_generico` varchar(20) NOT NULL,
   `nombre_comercial` varchar(20) DEFAULT NULL,
@@ -416,7 +416,7 @@ INSERT INTO `info_medicamentos` (`id_info_medicamento`, `nombre_generico`, `nomb
 -- Estructura de tabla para la tabla `internos`
 --
 
-CREATE TABLE `internos` (
+CREATE TABLE IF NOT EXISTS `internos` (
   `id_interno` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `id_medico` int(11) NOT NULL,
@@ -430,7 +430,7 @@ CREATE TABLE `internos` (
 -- Estructura de tabla para la tabla `inventario_medicamentos`
 --
 
-CREATE TABLE `inventario_medicamentos` (
+CREATE TABLE IF NOT EXISTS `inventario_medicamentos` (
   `id_medicamento` int(11) NOT NULL,
   `id_info_medicamento` int(11) NOT NULL,
   `cantidad` int(11) DEFAULT NULL
@@ -442,7 +442,7 @@ CREATE TABLE `inventario_medicamentos` (
 -- Estructura de tabla para la tabla `medicos`
 --
 
-CREATE TABLE `medicos` (
+CREATE TABLE IF NOT EXISTS `medicos` (
   `id_medico` int(11) NOT NULL,
   `id_empleado` int(11) NOT NULL,
   `cedula` varchar(20) NOT NULL
@@ -461,7 +461,7 @@ INSERT INTO `medicos` (`id_medico`, `id_empleado`, `cedula`) VALUES
 -- Estructura de tabla para la tabla `medicos_especialidades`
 --
 
-CREATE TABLE `medicos_especialidades` (
+CREATE TABLE IF NOT EXISTS `medicos_especialidades` (
   `id_medico_especialidad` int(11) NOT NULL,
   `id_medico` int(11) NOT NULL,
   `id_especialidad` int(11) NOT NULL
@@ -473,7 +473,7 @@ CREATE TABLE `medicos_especialidades` (
 -- Estructura de tabla para la tabla `medicos_horarios`
 --
 
-CREATE TABLE `medicos_horarios` (
+CREATE TABLE IF NOT EXISTS `medicos_horarios` (
   `id_medico_horario` int(11) NOT NULL,
   `id_medico` int(11) NOT NULL,
   `id_horario` int(11) NOT NULL
@@ -485,7 +485,7 @@ CREATE TABLE `medicos_horarios` (
 -- Estructura de tabla para la tabla `nominas`
 --
 
-CREATE TABLE `nominas` (
+CREATE TABLE IF NOT EXISTS `nominas` (
   `id_nomina` int(11) NOT NULL,
   `salario` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -496,7 +496,7 @@ CREATE TABLE `nominas` (
 -- Estructura de tabla para la tabla `operaciones`
 --
 
-CREATE TABLE `operaciones` (
+CREATE TABLE IF NOT EXISTS `operaciones` (
   `id_operacion` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `id_departamento` int(11) NOT NULL,
@@ -512,7 +512,7 @@ CREATE TABLE `operaciones` (
 -- Estructura de tabla para la tabla `operaciones_medicos`
 --
 
-CREATE TABLE `operaciones_medicos` (
+CREATE TABLE IF NOT EXISTS `operaciones_medicos` (
   `id_operacion_medico` int(11) NOT NULL,
   `id_operacion` int(11) NOT NULL,
   `id_medico` int(11) NOT NULL
@@ -524,7 +524,7 @@ CREATE TABLE `operaciones_medicos` (
 -- Estructura de tabla para la tabla `pacientes`
 --
 
-CREATE TABLE `pacientes` (
+CREATE TABLE IF NOT EXISTS `pacientes` (
   `id_paciente` int(11) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `nombre` varchar(20) NOT NULL,
@@ -561,7 +561,7 @@ INSERT INTO `pacientes` (`id_paciente`, `id_cliente`, `nombre`, `edad`, `especie
 -- Estructura de tabla para la tabla `puestos`
 --
 
-CREATE TABLE `puestos` (
+CREATE TABLE IF NOT EXISTS `puestos` (
   `id_puesto` int(11) NOT NULL,
   `nombre` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -572,7 +572,7 @@ CREATE TABLE `puestos` (
 -- Estructura de tabla para la tabla `recetas`
 --
 
-CREATE TABLE `recetas` (
+CREATE TABLE IF NOT EXISTS `recetas` (
   `id_receta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -589,7 +589,7 @@ INSERT INTO `recetas` (`id_receta`) VALUES
 -- Estructura de tabla para la tabla `recetas_medicamentos`
 --
 
-CREATE TABLE `recetas_medicamentos` (
+CREATE TABLE IF NOT EXISTS `recetas_medicamentos` (
   `id_receta_medicamento` int(11) NOT NULL,
   `id_info_medicamento` int(11) NOT NULL,
   `id_receta` int(11) NOT NULL,
@@ -613,7 +613,7 @@ INSERT INTO `recetas_medicamentos` (`id_receta_medicamento`, `id_info_medicament
 -- Estructura de tabla para la tabla `tipos_administracion_medicamentos`
 --
 
-CREATE TABLE `tipos_administracion_medicamentos` (
+CREATE TABLE IF NOT EXISTS `tipos_administracion_medicamentos` (
   `id_tipo_administracion` int(11) NOT NULL,
   `nombre` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -640,7 +640,7 @@ INSERT INTO `tipos_administracion_medicamentos` (`id_tipo_administracion`, `nomb
 -- Estructura de tabla para la tabla `tipos_camas`
 --
 
-CREATE TABLE `tipos_camas` (
+CREATE TABLE IF NOT EXISTS `tipos_camas` (
   `id_tipo_cama` int(11) NOT NULL,
   `descripcion` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -651,7 +651,7 @@ CREATE TABLE `tipos_camas` (
 -- Estructura de tabla para la tabla `tipos_medicamentos`
 --
 
-CREATE TABLE `tipos_medicamentos` (
+CREATE TABLE IF NOT EXISTS `tipos_medicamentos` (
   `id_tipo_medicamento` int(11) NOT NULL,
   `nombre` varchar(80) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -678,7 +678,7 @@ INSERT INTO `tipos_medicamentos` (`id_tipo_medicamento`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `tipos_operaciones`
 --
 
-CREATE TABLE `tipos_operaciones` (
+CREATE TABLE IF NOT EXISTS `tipos_operaciones` (
   `id_tipo_operacion` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `especificaciones` text
@@ -690,7 +690,7 @@ CREATE TABLE `tipos_operaciones` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
+CREATE TABLE IF NOT EXISTS `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nombre_usuario` varchar(20) NOT NULL,
   `contrasena` varchar(255) NOT NULL,
@@ -713,7 +713,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `contrasena`, `id_clinic
 -- Estructura de tabla para la tabla `vacunas`
 --
 
-CREATE TABLE `vacunas` (
+CREATE TABLE IF NOT EXISTS `vacunas` (
   `id_vacuna` int(11) NOT NULL,
   `abreviatura` varchar(10) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL
@@ -737,7 +737,7 @@ INSERT INTO `vacunas` (`id_vacuna`, `abreviatura`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `vacunas_pacientes`
 --
 
-CREATE TABLE `vacunas_pacientes` (
+CREATE TABLE IF NOT EXISTS `vacunas_pacientes` (
   `id_vacunas_pacientes` int(11) NOT NULL,
   `id_vacuna` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
